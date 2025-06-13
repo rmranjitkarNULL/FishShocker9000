@@ -1,0 +1,7 @@
+Finish code for sending shock on one cell
+
+Implement hashmap for pins
+Implement fifo for buffering multiple inputs at once
+Look into configuring multiple counters for the timer and having that be enabled only when the fish is in the section
+
+Convert code into raw c (nxpimxrt)
