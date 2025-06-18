@@ -245,7 +245,9 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "Global_Library"
+    ],
     "pinned_symbol_libs": []
   },
   "meta": {
