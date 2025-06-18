@@ -27,13 +27,21 @@ void countShock(){
         }
     #endif
 
-    if(shockCounter > DELTA_SHOCK + DELTA_REST - 1) shockCounter = 0;
+    if(shockCounter > SHOCK_CYCLE - 1) shockCounter = 0;
     shockCounter++;
 }
 
 void shockSetup(){
+    // Initializing Pins
+    Serial.println("Initializing Shock Setup...");
     pinMode(CELL1, OUTPUT);
     digitalWrite(CELL1, LOW);
+    Serial.println("Pins Initialized...");
+
+    // Initializing Timer
+    shockTimer.begin(countShock, shockTimerInterval);
+    Serial.println("Timer Initialized...");
+    Serial.println("Shock Setup Complete");
 }
 
 /*
@@ -71,7 +79,7 @@ void sendShock(int cellPin){
     if(shockCounter < DELTA_SHOCK - 1) {
         digitalWrite(cellPin, HIGH);
 
-        #ifdef SHOCK_PULSE
+        #ifdef SHOCK_PULSECan you 
             Serial.printf("Sending shock to pin %d: %dms\n", cellPin, shockCounter);
             state = 1;
         #endif
