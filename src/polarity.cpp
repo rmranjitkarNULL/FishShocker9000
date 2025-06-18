@@ -19,7 +19,7 @@ void polaritySetup(){
     pinMode(POL_PIN_2, OUTPUT);
 
     digitalWrite(POL_PIN_1, LOW);
-    digitalWrite(POL_PIN_1, HIGH);
+    digitalWrite(POL_PIN_2, HIGH);
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
