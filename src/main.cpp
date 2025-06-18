@@ -15,6 +15,6 @@ void setup() {
 }
 
 void loop() {
-  sendShock(CELL1);
+  
 }
 
