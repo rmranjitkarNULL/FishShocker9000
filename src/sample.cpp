@@ -11,7 +11,7 @@ void cb_init(CircularBuffer *cb, uint8_t *buffer_array, uint8_t size){
 bool cb_push(CircularBuffer *cb, uint8_t data){
     if(cb_is_full(cb)) return false;
     cb->buffer[cb->head] = data;
-    cb->head = (cb->head + 1) % cb-> size;
+    cb->head = (cb->head + 1) % cb->size;
     cb->full = (cb->head == cb->tail);
     return true;
 }
@@ -24,10 +24,28 @@ bool cb_pop(CircularBuffer *cb, uint8_t *data){
     return true;
 }
 
-bool cb_is_empty(CircularBuffer *cb) {
+bool cb_is_empty(CircularBuffer *cb){
     return (!cb->full && cb->head == cb->tail);
 }
 
-bool cb_is_full(CircularBuffer *cb) {
+bool cb_is_full(CircularBuffer *cb){
     return cb->full;
+}
+
+bool cb_peek(CircularBuffer *cb, uint8_t *data){
+    if(cb_is_empty(cb)) return false;
+    *data = cb->buffer[cb->tail];
+    return true;
+}
+
+bool cb_clear(CircularBuffer *cb){
+
+    for(int i = cb->size - 1; i >= 0; i--){
+        cb->buffer[i] = 0;
+    }
+    cb->head = 0;
+    cb->tail = 0;
+    cb->full = false;
+
+    return true;
 }
