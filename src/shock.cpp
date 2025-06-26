@@ -1,37 +1,41 @@
 #include "shock.h"
 
 // Global Variables
-volatile unsigned long shockCounter = 0;
+volatile unsigned long shock_counter = 0;
 
 // Timer config
-IntervalTimer shockTimer;
+IntervalTimer shock_timer;
 
 #ifdef SHOCK_PULSE
     int state = 0;
 #endif
 
 /* 
-    void countShock()
+    void count_shock()
 
-    This function is used as a counter for sending out the shocking signals towards the corresponding y cell
-    The max count is the duration of the shock (ms) plus the duration of rest (ms), which resets the counter
-    to zero after.
+    This function is used as a counter for sending out the shocking signals towards the corresponding y-cell.
+    The max count is the duration of the shock (ms) plus the duration of rest (ms), which resets the counter to zero after.
 */
-void countShock(){
+void count_shock() {
 
     // Debug flag to check if the timer counts up to desired time period
     #ifdef SHOCK_TIMER
-        Serial.printf("%dms... \n", shockCounter);
-        if(shockCounter > DELTA_SHOCK + DELTA_REST - 1){
+        Serial.printf("%dms... \n", shock_counter);
+        if (shock_counter > DELTA_SHOCK + DELTA_REST - 1) {
             return;
         }
     #endif
 
-    if(shockCounter > SHOCK_CYCLE - 1) shockCounter = 0;
-    shockCounter++;
+    if (shock_counter > SHOCK_CYCLE - 1) shock_counter = 0;
+    shock_counter++;
 }
 
-void shockSetup(){
+/* 
+    void shock_setup()
+
+    Initializes pins and timer for shock signal.
+*/
+void shock_setup() {
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
     pinMode(CELL1, OUTPUT);
@@ -39,55 +43,49 @@ void shockSetup(){
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
-    shockTimer.begin(countShock, shockTimerInterval);
+    shock_timer.begin(count_shock, SHOCK_TIMER_INTERVAL);
     Serial.println("Timer Initialized...");
     Serial.println("Shock Setup Complete");
 }
 
 /*
-    void inArea()
-    ! Place Holder for now to always return the first cell'
-    ? use a dictionary/set for the final lookup from the pins to the actual cell
-    ? Use a fifo for getting the cellPins for proper time efficiency
+    int in_area()
 
-    This function detects whether the corresponding fish is in the designated shock zone
-    and returns the zebra fish's corresponding y-cell as a number to lookup the correct pin
+    Placeholder for detecting whether a fish is in the designated shock zone.
+    Returns the y-cell as a number to look up the corresponding pin.
 */
-int inArea(){
+int in_area() {
     return CELL1;
 }
 
 /*
-    void sendShock(int cellPin)
-        int cellPin: The pin that corresponds to the cell that is being shocked
-    
-    This function sends out the signal to the corresponding cell based on the pin
-    ! Maybe have multiple counters that only go up after the time is done? and have
-    ! Multiple counters per section that only counts if its being triggered?
+    void send_shock(int cell_pin)
 
+    Sends a shock signal to the specified pin if the counter is within the shock duration.
+    - int cell_pin: The pin that corresponds to the cell that is being shocked
 */
-void sendShock(int cellPin){
+void send_shock(int cell_pin) {
     #ifdef SHOCK_PULSE
         Serial.print(">State:");
         Serial.println(state);
 
         Serial.print(">Time (ms):");
-        Serial.println(shockCounter);
+        Serial.println(shock_counter);
     #endif
 
-    // Send a shock if the counter is less then deltaShock
-    if(shockCounter < DELTA_SHOCK - 1) {
-        digitalWrite(cellPin, HIGH);
+    // Send a shock if the counter is less than delta_shock
+    if (shock_counter < DELTA_SHOCK - 1) {
+        digitalWrite(cell_pin, HIGH);
 
-        #ifdef SHOCK_PULSECan you 
-            Serial.printf("Sending shock to pin %d: %dms\n", cellPin, shockCounter);
+        #ifdef SHOCK_PULSE
+            Serial.printf("Sending shock to pin %d: %dms\n", cell_pin, shock_counter);
             state = 1;
         #endif
     } else {
-        digitalWrite(cellPin, LOW);
+        digitalWrite(cell_pin, LOW);
 
         #ifdef SHOCK_PULSE
-            //Serial.printf("Ending shock on pin %d: %dms\n", cellPin, shockCounter);
+            // Serial.printf("Ending shock on pin %d: %dms\n", cell_pin, shock_counter);
             state = 0;
         #endif
     }
