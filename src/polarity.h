@@ -15,7 +15,22 @@ extern volatile unsigned long polarity_counter;  // in ms, max
 extern IntervalTimer polarity_timer;
 
 // Functions
+
+/* void polarity_setup()
+ * Sets up the GPIO pins used for the H-bridge as outputs
+ * and sets up the timer for calling the swap_polarity function
+ * @param: NA
+ * @return: NA
+ */
 void polarity_setup();
+
+/* void swap_polarity()
+ * @brief Swaps polarity of shock signal
+ * @param: NA
+ * @return: NA
+ *
+ * This function sends signals to the H-bridge to swap the polarity
+ */
 void swap_polarity();
 
 #endif // POLARITY_H
