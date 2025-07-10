@@ -1,22 +1,28 @@
 import time
 import keyboard
 import re
+import serial
 
 from pySerialTransfer import pySerialTransfer as txfer
 
 
+SERIAL_PORT = 'COM3'
+
 if __name__ == '__main__':
     try:
-        link = txfer.SerialTransfer('COM7')
+        link = txfer.SerialTransfer(SERIAL_PORT)
         
         link.open()
+        
         time.sleep(2)
+        print("Ready to send inputs...")
         
         while True:
+                
             if re.fullmatch("^[0-9]+$", keyboard.read_key()):
                 send_size = 0
             	
-                list_ = [1, int(keyboard.read_key())]
+                list_ = int(keyboard.read_key())
                 list_size = link.tx_obj(list_)
                 send_size += list_size
 

@@ -4,66 +4,72 @@
 #include "sample.h"
 #include "SerialTransfer.h"
 
-// Buffer Variables
-#define BUF_SIZE 8
-CircularBuffer cell_cycle; // Circular buffer for sending a shock when the fish is detected in the correct area
-uint8_t buffer[BUF_SIZE] = {0};
+// Serial Transfer from python script
+SerialTransfer myTransfer;
 
-#ifndef MAIN_LOOP
+// Buffer Variables
+#define BUF_SIZ 8
+CircularBuffer cell_ids; // Circular buffer for sending a shock when the fish is detected in the correct area
+uint8_t buffer[BUF_SIZ] = {0};
+
+// Array of pins
+const uint8_t CELL_PINS[] = {LED_BUILTIN, A1, A2, A3, A4};
+const uint8_t NUM_PINS = sizeof(CELL_PINS) / sizeof(CELL_PINS[0]);
+
+// Global Variables
+uint8_t target_cell = 0;
+
 void setup() {
+
+  // Initialize Serial
   Serial.begin(115200);
-  
   while (!Serial);
   Serial.println("Initializing Setup");
 
-  // Initialize shock setup
+  // Initialize shock setup (Pins, Timers, etc.)
   shock_setup();
 
-  // Initialize polarity setup
+  // Initialize polarity setup (Pins, Timers, etc.)
   polarity_setup();
 
   // Initialize buffer
-  cb_init(&cell_cycle, buffer, BUF_SIZE);
+  cb_init(&cell_ids, buffer, BUF_SIZ);
+
+  // Initialize Serial
+  myTransfer.begin(Serial);
+
+  pinMode(LED_BUILTIN, OUTPUT);
 
   Serial.println("FishShocker9000: Setup Complete\n");
-}
+} 
 
 void loop() {
-  // Setup variables
-  uint8_t target_cell = 0;
 
-  /*
-    TODO: Modify for CAN protocol in the future
-    * Make sure it's in an ISR (that's where the data is pushed)
-  */
-  cb_push(&cell_cycle, in_area());
-
-  // Pop the circular buffer and then send the shock to that pin
-  cb_pop(&cell_cycle, target_cell);
-  send_shock(target_cell);
-}
-#endif
-
-#ifdef MAIN_LOOP
-
-SerialTransfer myTransfer;
-
-void setup()
-{
-  Serial.begin(115200);
-  myTransfer.begin(Serial);
-}
-
-
-void loop()
-{
   if(myTransfer.available())
   {
+    // Declare Variable to store 
+    uint16_t data;
+    uint16_t cell_id;
+
     // send all received data back to Python
     for(uint16_t i=0; i < myTransfer.bytesRead; i++)
       myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
     
     myTransfer.sendData(myTransfer.bytesRead);
+
+    // Save recievbed data to circular buffer
+    myTransfer.rxObj(data);
+    cell_id = data;
+
+    // Push data to circular buffer
+    cb_push(&cell_ids, cell_id);
   }
+
+  // If there are cells in the buffer, pop it
+  if(cb_pop(&cell_ids, &target_cell)){
+    // Send the shock to the corresponding cell
+    digitalWrite(target_cell, !digitalRead(target_cell));
+  }
+
 }
-#endif
+

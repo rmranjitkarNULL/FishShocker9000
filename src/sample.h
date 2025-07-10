@@ -10,9 +10,9 @@ typedef struct {
     bool full;
 } CircularBuffer;
 
-void cb_init(CircularBuffer *cb, uint8_t *buffer_array, uint16_t size);
+void cb_init(CircularBuffer *cb, uint8_t *buffer_array, uint8_t size);
 
-bool cb_pop(CircularBuffer *cb, uint8_t data);
+bool cb_pop(CircularBuffer *cb, uint8_t* data);
 
 bool cb_push(CircularBuffer *cb, uint8_t data);
 

@@ -20,7 +20,7 @@ void count_shock() {
 
     if (shock_counter > SHOCK_CYCLE - 1) shock_counter = 0;
     shock_counter++;
-}
+}   
 
 void shock_setup() {
     Serial.println("Initializing Shock Setup...");
@@ -40,6 +40,7 @@ int in_area() {
     return CELL1;
 }
 
+#ifdef SHOCK_PULSE
 void send_shock(int cell_pin) {
     #ifdef SHOCK_PULSE
         Serial.print(">State:");
@@ -64,3 +65,16 @@ void send_shock(int cell_pin) {
         #endif
     }
 }
+#endif
+
+#ifndef SHOCK_PULSE
+void send_shock(int cell_pin) {
+    if (shock_counter < DELTA_SHOCK - 1) {
+        digitalWrite(cell_pin, HIGH);
+
+
+    } else {
+        digitalWrite(cell_pin, LOW);
+    }
+}
+#endif

@@ -1,3 +1,4 @@
+/*
 #include "SerialTransfer.h"
 
 
@@ -22,3 +23,4 @@ void loop()
     myTransfer.sendData(myTransfer.bytesRead);
   }
 }
+*/
