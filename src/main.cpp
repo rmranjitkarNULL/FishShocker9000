@@ -7,17 +7,16 @@
 // Serial Transfer from python script
 SerialTransfer myTransfer;
 
-// Buffer Variables
-#define BUF_SIZ 8
-CircularBuffer cell_ids; // Circular buffer for sending a shock when the fish is detected in the correct area
-uint8_t buffer[BUF_SIZ] = {0};
+// Cells
+Cell LED = {LED_BUILTIN};
+Cell cell_1 ={CELL1};
+Cell cell_2 ={CELL2};
+Cell cell_3 ={CELL3};
+Cell cell_4 ={CELL4};
+Cell cell_5 ={CELL5};
 
-// Array of pins
-const uint8_t CELL_PINS[] = {LED_BUILTIN, A1, A2, A3, A4};
-const uint8_t NUM_PINS = sizeof(CELL_PINS) / sizeof(CELL_PINS[0]);
-
-// Global Variables
-uint8_t target_cell = 0;
+const Cell* CELLS[] = {&LED, &cell_1, &cell_2, &cell_3, &cell_4, &cell_5};
+const uint8_t NUM_CELLS = sizeof(CELLS) / sizeof(CELLS[0]);
 
 void setup() {
 
@@ -32,23 +31,20 @@ void setup() {
   // Initialize polarity setup (Pins, Timers, etc.)
   polarity_setup();
 
-  // Initialize buffer
-  cb_init(&cell_ids, buffer, BUF_SIZ);
-
-  // Initialize Serial
+  // Initialize Serial for python script
   myTransfer.begin(Serial);
 
+  // ? debugging
   pinMode(LED_BUILTIN, OUTPUT);
 
   Serial.println("FishShocker9000: Setup Complete\n");
 } 
 
 void loop() {
-
+ 
+  // * This will become a CAN Interrupt in the future. Potentially need FIFO for that.
   if(myTransfer.available())
   {
-    // Declare Variable to store 
-    uint16_t data;
     uint16_t cell_id;
 
     // send all received data back to Python
@@ -58,18 +54,10 @@ void loop() {
     myTransfer.sendData(myTransfer.bytesRead);
 
     // Save recievbed data to circular buffer
-    myTransfer.rxObj(data);
-    cell_id = data;
-
-    // Push data to circular buffer
-    cb_push(&cell_ids, cell_id);
+    myTransfer.rxObj(cell_id);
   }
-
-  // If there are cells in the buffer, pop it
-  if(cb_pop(&cell_ids, &target_cell)){
-    // Send the shock to the corresponding cell
-    digitalWrite(target_cell, !digitalRead(target_cell));
-  }
-
 }
 
+// Test new timing to make sure it works
+// Add Fifo for can
+// ensure everything works and create a demo for it

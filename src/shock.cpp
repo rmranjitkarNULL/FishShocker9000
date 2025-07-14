@@ -1,24 +1,12 @@
 #include "shock.h"
 
 // Global Variables
-volatile unsigned long shock_counter = 0;  // Counter for shock timing (in ms)
+volatile uint32_t shock_counter = 0;  // Counter for shock timing (in ms)
 
 // Timer Configuration
 IntervalTimer shock_timer;
 
-#ifdef SHOCK_PULSE
-int state = 0;  // State flag for debugging
-#endif
-
 void count_shock() {
-    #ifdef SHOCK_TIMER
-        Serial.printf("%dms... \n", shock_counter);
-        if (shock_counter > DELTA_SHOCK + DELTA_REST - 1) {
-            return;
-        }
-    #endif
-
-    if (shock_counter > SHOCK_CYCLE - 1) shock_counter = 0;
     shock_counter++;
 }   
 
@@ -36,45 +24,47 @@ void shock_setup() {
     Serial.println("Shock Setup Complete");
 }
 
-int in_area() {
-    return CELL1;
-}
 
-#ifdef SHOCK_PULSE
-void send_shock(int cell_pin) {
-    #ifdef SHOCK_PULSE
-        Serial.print(">State:");
-        Serial.println(state);
-
-        Serial.print(">Time (ms):");
-        Serial.println(shock_counter);
-    #endif
-
-    if (shock_counter < DELTA_SHOCK - 1) {
-        digitalWrite(cell_pin, HIGH);
-
-        #ifdef SHOCK_PULSE
-            Serial.printf("Sending shock to pin %d: %dms\n", cell_pin, shock_counter);
-            state = 1;
-        #endif
-    } else {
-        digitalWrite(cell_pin, LOW);
-
-        #ifdef SHOCK_PULSE
-            state = 0;
-        #endif
+void send_signal(Cell *cell, int level) {
+    if(cell->in_zone){
+        uint8_t pin = cell->cell_id;
+        cell->shock_on = true;
+        digitalWrite(pin, level);
     }
 }
-#endif
 
-#ifndef SHOCK_PULSE
-void send_shock(int cell_pin) {
-    if (shock_counter < DELTA_SHOCK - 1) {
-        digitalWrite(cell_pin, HIGH);
+void control_shock(Cell *cell){
+    uint32_t curr_time = shock_counter;
 
-
-    } else {
-        digitalWrite(cell_pin, LOW);
+    if(cell->in_zone){
+        if(check_start(cell)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = true;
+            send_signal(cell, HIGH);
+        }else if(check_shock(cell, curr_time)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = false;
+            send_signal(cell, LOW);
+        }else if(check_rest){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = true;
+            send_signal(cell, HIGH);
+        }  
+    } else{
+        cell-> last_toggle_time = 0;
+        cell->shock_on = false;
+        return;
     }
 }
-#endif
+
+bool check_start(Cell *cell){
+    return ((cell->last_toggle_time == 0) && (!cell->shock_on));
+}
+
+bool check_shock(Cell *cell, uint32_t curr_time){
+    return ((curr_time - cell->last_toggle_time >= DELTA_SHOCK) && (cell->shock_on));
+}
+
+bool check_rest(Cell *cell, uint32_t curr_time){
+    return ((curr_time - cell->last_toggle_time >= DELTA_REST) && (!cell->shock_on));
+}
