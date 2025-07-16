@@ -8,17 +8,9 @@ void setup() {
   while(!Serial);
 
   // Initialize pins
-  Serial.println("Initializing Pins...");
+  Serial.println("Initializing Setup");
   shockSetup();
   polaritySetup();
-  Serial.println("Pins Initialized...");
-
-  // Initialize timers
-  Serial.println("Initializing Timers...");
-  shockTimer.begin(countShock, shockTimerInterval);
-  polarityTimer.begin(swapPolarity, polarityTimerInterval);
-  Serial.println("Initialized Timers...");
-
   Serial.println("FishShocker9000: Setup Complete\n");
 }
 
