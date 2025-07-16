@@ -3358,7 +3358,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MP23315:MP2331HGTL-Z"
+		(symbol "MP2331HGTL-Z:MP2331HGTL-Z"
 			(pin_names
 				(offset 0.254)
 			)
@@ -3391,7 +3391,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "MP2331HGTL-Z"
+			(property "Datasheet" "https://www.monolithicpower.com/en/documentview/productdocument/index/version/2/document_type/Datasheet/lang/en/sku/MP2331HGTL-Z"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3622,6 +3622,113 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4522,7 +4629,7 @@
 		)
 		(uuid "042d70ad-34ec-4629-9b53-450f1df157f6")
 	)
-	(text "Pogo Pin Connections (6 per Y, 3 per \"side\")"
+	(text "Pogo Pin Connections (6 per Y, 2 per arm (3 arms))"
 		(exclude_from_sim no)
 		(at 545.592 -30.734 0)
 		(effects
@@ -4546,9 +4653,9 @@
 		)
 		(uuid "121a1119-3c43-4c28-8315-8417338cb5b6")
 	)
-	(text "TODO:\nFigure out Values for all placeholders"
+	(text "TODO:\nCHECK???"
 		(exclude_from_sim no)
-		(at 68.58 -9.906 0)
+		(at 91.694 14.478 0)
 		(effects
 			(font
 				(size 3.81 3.81)
@@ -4620,7 +4727,7 @@
 	)
 	(text "H-Bridges"
 		(exclude_from_sim no)
-		(at 249.428 74.168 0)
+		(at 251.968 74.168 0)
 		(effects
 			(font
 				(size 3.175 3.175)
@@ -4926,6 +5033,12 @@
 		(uuid "456edf49-8ef1-4cd2-91bd-e430e3bc727a")
 	)
 	(junction
+		(at 251.46 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b410ff8-dfba-41c6-bbe5-278f0608f281")
+	)
+	(junction
 		(at 607.06 16.51)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5112,12 +5225,6 @@
 		(uuid "85ff1f65-f9e0-4db8-9445-c9fd2d23129e")
 	)
 	(junction
-		(at 124.46 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8d471d6c-a9c1-41be-876b-a10a1bdd3ec2")
-	)
-	(junction
 		(at 607.06 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5202,6 +5309,12 @@
 		(uuid "a31d90b8-b506-4831-b39e-32d6e90cf8af")
 	)
 	(junction
+		(at 275.59 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a34cce3c-18a7-4ec4-aa8f-467ff57d2504")
+	)
+	(junction
 		(at 607.06 7.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5260,6 +5373,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9c0610d-8525-441d-848a-0307464bb388")
+	)
+	(junction
+		(at 300.99 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb865dae-de99-4bbf-944a-b07d00e45167")
 	)
 	(junction
 		(at 199.39 38.1)
@@ -5512,6 +5631,16 @@
 			(type default)
 		)
 		(uuid "0031b7a5-5dc6-43d7-89a9-f3bec9772ce2")
+	)
+	(wire
+		(pts
+			(xy 275.59 59.69) (xy 300.99 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "004427c3-816b-4045-92cf-3b628a6376fb")
 	)
 	(wire
 		(pts
@@ -5992,6 +6121,16 @@
 			(type default)
 		)
 		(uuid "18ee780d-d6b4-418d-9c7a-3bd504de1c1c")
+	)
+	(wire
+		(pts
+			(xy 251.46 59.69) (xy 275.59 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18fc4cdf-8eaa-412c-8dc9-7c9b83b40bca")
 	)
 	(wire
 		(pts
@@ -6565,6 +6704,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.81 43.18) (xy 257.81 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b625e14-a0c2-49f7-81a5-79f5e88dbcc1")
+	)
+	(wire
+		(pts
 			(xy 379.73 198.12) (xy 379.73 209.55)
 		)
 		(stroke
@@ -7015,7 +7164,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 54.61) (xy 124.46 62.23)
+			(xy 124.46 50.8) (xy 124.46 62.23)
 		)
 		(stroke
 			(width 0)
@@ -7935,16 +8084,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 54.61) (xy 130.81 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88a7394e-baed-46d2-a7b7-41bcf5ca7bb3")
-	)
-	(wire
-		(pts
 			(xy 492.76 118.11) (xy 492.76 116.84)
 		)
 		(stroke
@@ -8555,16 +8694,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 50.8) (xy 124.46 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8efabd9-5ea2-4fe3-976d-2d3f1eebb9a0")
-	)
-	(wire
-		(pts
 			(xy 523.24 184.15) (xy 523.24 182.88)
 		)
 		(stroke
@@ -8692,6 +8821,16 @@
 			(type default)
 		)
 		(uuid "ae051851-9661-47a2-a619-2a3f3d7d6e01")
+	)
+	(wire
+		(pts
+			(xy 261.62 43.18) (xy 257.81 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae439e90-0e6e-4bb6-9f91-57ab83b57bae")
 	)
 	(wire
 		(pts
@@ -8985,6 +9124,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 59.69) (xy 300.99 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bde0f847-2247-4c2e-bb02-214ae3774777")
+	)
+	(wire
+		(pts
 			(xy 212.09 38.1) (xy 212.09 40.64)
 		)
 		(stroke
@@ -9152,6 +9301,16 @@
 			(type default)
 		)
 		(uuid "c5d16425-470d-44c2-babe-476fce184b05")
+	)
+	(wire
+		(pts
+			(xy 226.06 59.69) (xy 251.46 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5d46bd4-35ca-4c0d-b766-fb1042c9f54d")
 	)
 	(wire
 		(pts
@@ -9582,6 +9741,16 @@
 			(type default)
 		)
 		(uuid "dbca6b7c-2569-4d07-8235-de246149b284")
+	)
+	(wire
+		(pts
+			(xy 309.88 62.23) (xy 309.88 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc819c41-8f8c-40da-9407-2a232d51ab96")
 	)
 	(wire
 		(pts
@@ -11459,28 +11628,6 @@
 			)
 		)
 	)
-	(global_label "BUCK_GND"
-		(shape input)
-		(at 261.62 43.18 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "60120228-5244-4fd3-b6e8-f8fb619621ba")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.6562 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CELL4"
 		(shape input)
 		(at 227.33 120.65 0)
@@ -11569,7 +11716,7 @@
 			)
 		)
 	)
-	(global_label "BUCK_FB"
+	(global_label "BUCK_SS"
 		(shape input)
 		(at 302.26 38.1 0)
 		(fields_autoplaced yes)
@@ -11581,7 +11728,7 @@
 		)
 		(uuid "67efd89c-9ced-45f7-8b87-1ef4eb817ea4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 313.7119 38.1 0)
+			(at 313.7723 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12581,28 +12728,6 @@
 			)
 		)
 	)
-	(global_label "BUCK_GND"
-		(shape input)
-		(at 130.81 54.61 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b0c9efe7-e852-45b6-8aa1-766fd87a3216")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 143.7738 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Plate 12.2"
 		(shape input)
 		(at 556.26 285.75 180)
@@ -12845,7 +12970,7 @@
 			)
 		)
 	)
-	(global_label "EN"
+	(global_label "BUCK_EN"
 		(shape input)
 		(at 199.39 58.42 0)
 		(fields_autoplaced yes)
@@ -12857,7 +12982,7 @@
 		)
 		(uuid "c7210794-c404-4218-8add-1ca9c64095f1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 204.8547 58.42 0)
+			(at 210.9628 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13643,7 +13768,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 252.73 0)
 			(effects
 				(font
@@ -14073,7 +14198,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 220.98 260.35 0)
 			(effects
 				(font
@@ -14143,7 +14268,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 270.51 0)
 			(effects
 				(font
@@ -14331,7 +14456,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 196.85 0)
 			(effects
 				(font
@@ -14519,7 +14644,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 200.66 165.1 0)
 			(effects
 				(font
@@ -14598,7 +14723,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 199.39 43.18 0)
 			(effects
 				(font
@@ -14667,7 +14792,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 157.48 199.39 0)
 			(effects
 				(font
@@ -14737,7 +14862,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 200.66 198.12 0)
 			(effects
 				(font
@@ -14816,7 +14941,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 252.73 0)
 			(effects
 				(font
@@ -15003,7 +15128,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 191.77 48.26 0)
 			(effects
 				(font
@@ -15137,7 +15262,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 222.25 95.25 0)
 			(effects
 				(font
@@ -15207,7 +15332,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 200.66 264.16 0)
 			(effects
 				(font
@@ -15286,7 +15411,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 215.9 0)
 			(effects
 				(font
@@ -15712,7 +15837,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 29.21 0)
 			(effects
 				(font
@@ -15900,7 +16025,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 215.9 0)
 			(effects
 				(font
@@ -16088,7 +16213,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 308.61 0)
 			(effects
 				(font
@@ -16408,7 +16533,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 200.66 132.08 0)
 			(effects
 				(font
@@ -16487,7 +16612,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 200.66 99.06 0)
 			(effects
 				(font
@@ -16632,7 +16757,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 156.21 0)
 			(effects
 				(font
@@ -16787,7 +16912,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 48.26 0)
 			(effects
 				(font
@@ -17059,7 +17184,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 171.45 260.35 0)
 			(effects
 				(font
@@ -17129,7 +17254,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 49.53 0)
 			(effects
 				(font
@@ -17381,7 +17506,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 220.98 227.33 0)
 			(effects
 				(font
@@ -17451,7 +17576,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 105.41 0)
 			(effects
 				(font
@@ -17751,7 +17876,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 151.13 90.17 0)
 			(effects
 				(font
@@ -17821,7 +17946,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 189.23 0)
 			(effects
 				(font
@@ -17891,7 +18016,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 104.14 0)
 			(effects
 				(font
@@ -18078,7 +18203,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 207.01 100.33 0)
 			(effects
 				(font
@@ -18148,7 +18273,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 151.13 231.14 0)
 			(effects
 				(font
@@ -18227,7 +18352,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 151.13 132.08 0)
 			(effects
 				(font
@@ -18306,7 +18431,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 29.21 0)
 			(effects
 				(font
@@ -18578,7 +18703,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DEV-16771:MODULE_DEV-16771"
+		(property "Footprint" "Library:Teensy 4.1"
 			(at 57.15 139.7 0)
 			(effects
 				(font
@@ -18957,7 +19082,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 106.68 44.45 0)
 			(effects
 				(font
@@ -19027,7 +19152,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 161.29 0)
 			(effects
 				(font
@@ -19517,7 +19642,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 156.21 232.41 0)
 			(effects
 				(font
@@ -19587,7 +19712,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 270.51 0)
 			(effects
 				(font
@@ -19840,7 +19965,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 307.34 0)
 			(effects
 				(font
@@ -20026,7 +20151,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 354.33 44.45 0)
 			(effects
 				(font
@@ -20094,7 +20219,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 172.72 194.31 0)
 			(effects
 				(font
@@ -20164,7 +20289,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 124.46 44.45 0)
 			(effects
 				(font
@@ -20232,7 +20357,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 172.72 128.27 0)
 			(effects
 				(font
@@ -20368,7 +20493,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 151.13 198.12 0)
 			(effects
 				(font
@@ -20513,7 +20638,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 -6.35 0)
 			(effects
 				(font
@@ -20877,7 +21002,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 336.55 52.07 0)
 			(effects
 				(font
@@ -20920,6 +21045,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 251.46 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "440de5d9-5c4b-4295-aadb-8fdd0e1677eb")
+		(property "Reference" "H4"
+			(at 254 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 254 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 251.46 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 251.46 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 251.46 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f00c73d-7501-44ff-8850-55623230270c")
+		)
+		(instances
+			(project "FishShocker9000"
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "P70-1000045R:P70-1000045R")
 		(at 579.12 161.29 90)
 		(unit 1)
@@ -20947,7 +21139,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 161.29 0)
 			(effects
 				(font
@@ -21135,7 +21327,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 86.36 0)
 			(effects
 				(font
@@ -21389,7 +21581,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 270.51 0)
 			(effects
 				(font
@@ -21729,7 +21921,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 -7.62 0)
 			(effects
 				(font
@@ -21917,7 +22109,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 151.13 264.16 0)
 			(effects
 				(font
@@ -22458,7 +22650,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 142.24 0)
 			(effects
 				(font
@@ -22711,7 +22903,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 157.48 100.33 0)
 			(effects
 				(font
@@ -22780,7 +22972,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 27.94 0)
 			(effects
 				(font
@@ -22850,7 +23042,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 198.12 0)
 			(effects
 				(font
@@ -23255,7 +23447,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 251.46 0)
 			(effects
 				(font
@@ -23573,7 +23765,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 222.25 194.31 0)
 			(effects
 				(font
@@ -23616,6 +23808,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 257.81 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6763e101-2d55-4c91-81fc-4411cc7eed46")
+		(property "Reference" "#PWR065"
+			(at 257.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 257.81 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 257.81 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 257.81 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4303c5f4-8533-496b-bfb7-d0e9017cff16")
+		)
+		(instances
+			(project ""
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 156.21 265.43 0)
 		(unit 1)
@@ -23642,7 +23900,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 156.21 265.43 0)
 			(effects
 				(font
@@ -23711,7 +23969,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 205.74 232.41 0)
 			(effects
 				(font
@@ -23781,7 +24039,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 -7.62 0)
 			(effects
 				(font
@@ -23969,7 +24227,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 140.97 0)
 			(effects
 				(font
@@ -24157,7 +24415,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Library:D0008A_L"
 			(at 52.07 255.27 0)
 			(effects
 				(font
@@ -24246,7 +24504,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 212.09 43.18 0)
 			(effects
 				(font
@@ -24382,7 +24640,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 86.36 0)
 			(effects
 				(font
@@ -24569,7 +24827,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 205.74 265.43 0)
 			(effects
 				(font
@@ -24639,7 +24897,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 151.13 255.27 0)
 			(effects
 				(font
@@ -24709,7 +24967,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 151.13 99.06 0)
 			(effects
 				(font
@@ -24788,7 +25046,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 140.97 0)
 			(effects
 				(font
@@ -24976,7 +25234,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 104.14 0)
 			(effects
 				(font
@@ -25164,7 +25422,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 30.48 0)
 			(effects
 				(font
@@ -25350,7 +25608,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 172.72 95.25 0)
 			(effects
 				(font
@@ -25417,7 +25675,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 354.33 52.07 0)
 			(effects
 				(font
@@ -25573,7 +25831,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 151.13 165.1 0)
 			(effects
 				(font
@@ -25652,7 +25910,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 123.19 0)
 			(effects
 				(font
@@ -25722,7 +25980,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 251.46 0)
 			(effects
 				(font
@@ -26042,7 +26300,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 49.53 0)
 			(effects
 				(font
@@ -26230,7 +26488,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 142.24 0)
 			(effects
 				(font
@@ -26418,7 +26676,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 48.26 0)
 			(effects
 				(font
@@ -26606,7 +26864,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 196.85 0)
 			(effects
 				(font
@@ -26841,6 +27099,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 309.88 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "821d9577-6140-4910-9021-569e74b5c445")
+		(property "Reference" "#PWR064"
+			(at 309.88 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 309.88 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 309.88 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a8e9fcc-04e2-47ed-ae5f-e7f3a76bedbd")
+		)
+		(instances
+			(project ""
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "#PWR064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 339.09 25.4 270)
 		(unit 1)
@@ -26866,7 +27190,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 339.09 25.4 0)
 			(effects
 				(font
@@ -27088,7 +27412,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 151.13 222.25 0)
 			(effects
 				(font
@@ -27224,7 +27548,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 215.9 0)
 			(effects
 				(font
@@ -27478,7 +27802,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 251.46 0)
 			(effects
 				(font
@@ -27666,7 +27990,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 307.34 0)
 			(effects
 				(font
@@ -27966,7 +28290,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 90.17 0)
 			(effects
 				(font
@@ -28036,7 +28360,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 200.66 231.14 0)
 			(effects
 				(font
@@ -28115,7 +28439,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 -7.62 0)
 			(effects
 				(font
@@ -28303,7 +28627,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 -6.35 0)
 			(effects
 				(font
@@ -28464,6 +28788,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 300.99 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "932b18c3-ec8d-4c58-a2fc-2432a917a6f9")
+		(property "Reference" "H2"
+			(at 303.53 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 303.53 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 300.99 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 300.99 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 300.99 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "17412f22-ef70-4423-99bd-7de47d761b23")
+		)
+		(instances
+			(project "FishShocker9000"
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "P70-1000045R:P70-1000045R")
 		(at 464.82 48.26 90)
 		(unit 1)
@@ -28491,7 +28882,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 48.26 0)
 			(effects
 				(font
@@ -28679,7 +29070,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 86.36 0)
 			(effects
 				(font
@@ -28867,7 +29258,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 271.78 0)
 			(effects
 				(font
@@ -29055,7 +29446,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 85.09 0)
 			(effects
 				(font
@@ -29856,7 +30247,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 198.12 0)
 			(effects
 				(font
@@ -30176,7 +30567,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 49.53 0)
 			(effects
 				(font
@@ -30364,7 +30755,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 29.21 0)
 			(effects
 				(font
@@ -30552,7 +30943,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 384.81 40.64 0)
 			(effects
 				(font
@@ -30681,6 +31072,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 226.06 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab5834ff-4164-4c44-b9dc-a5c8013bfa1f")
+		(property "Reference" "H3"
+			(at 228.6 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 228.6 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 226.06 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 226.06 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "29add51f-12a2-4b31-a849-65181120614b")
+		)
+		(instances
+			(project "FishShocker9000"
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 133.35 133.35 0)
 		(unit 1)
@@ -30774,7 +31232,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 91.44 53.34 0)
 			(effects
 				(font
@@ -30844,7 +31302,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 161.29 0)
 			(effects
 				(font
@@ -31098,7 +31556,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 255.27 0)
 			(effects
 				(font
@@ -31366,7 +31824,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 308.61 0)
 			(effects
 				(font
@@ -31554,7 +32012,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 151.13 123.19 0)
 			(effects
 				(font
@@ -31623,7 +32081,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 157.48 166.37 0)
 			(effects
 				(font
@@ -31693,7 +32151,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 222.25 0)
 			(effects
 				(font
@@ -31763,7 +32221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 151.13 189.23 0)
 			(effects
 				(font
@@ -31899,7 +32357,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 271.78 0)
 			(effects
 				(font
@@ -32087,7 +32545,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 271.78 0)
 			(effects
 				(font
@@ -32273,7 +32731,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 222.25 128.27 0)
 			(effects
 				(font
@@ -32343,7 +32801,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 160.02 0)
 			(effects
 				(font
@@ -32531,7 +32989,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 214.63 0)
 			(effects
 				(font
@@ -32719,7 +33177,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 140.97 0)
 			(effects
 				(font
@@ -32906,7 +33364,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 207.01 199.39 0)
 			(effects
 				(font
@@ -32974,7 +33432,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 222.25 161.29 0)
 			(effects
 				(font
@@ -33110,7 +33568,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 196.85 0)
 			(effects
 				(font
@@ -33298,7 +33756,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 160.02 0)
 			(effects
 				(font
@@ -33485,7 +33943,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 346.71 30.48 0)
 			(effects
 				(font
@@ -33686,7 +34144,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 157.48 133.35 0)
 			(effects
 				(font
@@ -33729,6 +34187,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 275.59 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf313436-dc6b-45db-954b-7a26d45ffc4f")
+		(property "Reference" "H1"
+			(at 278.13 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 278.13 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 275.59 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 275.59 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 275.59 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1e5dffd-8bd7-48ae-a89e-14b2852c9f1f")
+		)
+		(instances
+			(project ""
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:FerriteBead_Small")
 		(at 179.07 38.1 90)
 		(unit 1)
@@ -33754,7 +34279,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 179.07 39.878 90)
 			(effects
 				(font
@@ -33824,7 +34349,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 30.48 0)
 			(effects
 				(font
@@ -34010,7 +34535,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_CLIFF_FC681465S_SMT_Horizontal"
 			(at 40.64 36.576 0)
 			(effects
 				(font
@@ -34080,7 +34605,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 91.44 44.45 0)
 			(effects
 				(font
@@ -34126,194 +34651,6 @@
 			(project ""
 				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "P70-1000045R:P70-1000045R")
-		(at 325.12 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d09a6a62-f4d9-428a-8cef-42fdc71dbae6")
-		(property "Reference" "J2"
-			(at 334.01 128.2699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "P70-1000045R"
-			(at 334.01 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" "Harwin"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "3.70mm"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Package" "None"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Price" "None"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/P70-1000045R/Harwin/view-part/?ref=eda"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" "Manufacturer Recommendations"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "PARTREV" "4"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/P70-1000045R/Harwin/view-part/?ref=snap"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "P70-1000045R"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" "Individual Spring Loaded Contact / Pogo Pin, SMT, 3.5mm free height, Tape & Reeled with pick & place cap"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "Harwin"
-			(at 325.12 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "38c3e898-b1ce-4845-861b-b2162b9cc99c")
-		)
-		(instances
-			(project ""
-				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -34413,7 +34750,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 346.71 57.15 0)
 			(effects
 				(font
@@ -34481,7 +34818,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 171.45 227.33 0)
 			(effects
 				(font
@@ -34590,6 +34927,94 @@
 		)
 	)
 	(symbol
+		(lib_id "MP2331HGTL-Z:MP2331HGTL-Z")
+		(at 261.62 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6240ac5-f4da-4649-a38c-10fa6371c997")
+		(property "Reference" "U16"
+			(at 281.94 25.4 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "MP2331HGTL-Z"
+			(at 281.94 27.94 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "Library:SOT583_MP2331H"
+			(at 261.62 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.monolithicpower.com/en/documentview/productdocument/index/version/2/document_type/Datasheet/lang/en/sku/MP2331HGTL-Z"
+			(at 261.62 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "d4e8d8f9-56cf-4605-983f-a9f9fc4bc6a2")
+		)
+		(pin "2"
+			(uuid "7fb31eef-f807-4bd1-86e7-aa3b056e3c93")
+		)
+		(pin "1"
+			(uuid "7d31c775-44a0-44dd-9a74-28c27cd3d8a1")
+		)
+		(pin "4"
+			(uuid "1015d270-4bcb-49cf-9436-c549c0f9dffb")
+		)
+		(pin "3"
+			(uuid "3a4cadf2-fa72-4a90-8a25-4eb8ce8f7aea")
+		)
+		(pin "7"
+			(uuid "7dee0d78-aa8a-4a06-a762-a63867d2ff84")
+		)
+		(pin "6"
+			(uuid "a13ee71c-34af-40fb-8b5a-b8a3dc165c36")
+		)
+		(pin "5"
+			(uuid "0de82b65-0cf3-4941-8af7-22a654df784c")
+		)
+		(instances
+			(project ""
+				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
+					(reference "U16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 207.01 166.37 0)
 		(unit 1)
@@ -34616,7 +35041,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 207.01 166.37 0)
 			(effects
 				(font
@@ -34864,7 +35289,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 160.02 0)
 			(effects
 				(font
@@ -35049,7 +35474,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 356.87 35.56 0)
 			(effects
 				(font
@@ -35086,94 +35511,6 @@
 			(project ""
 				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
 					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MP23315:MP2331HGTL-Z")
-		(at 261.62 35.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "de4a6aa4-a0fa-4ee4-b808-8e0c0ee9876e")
-		(property "Reference" "U1"
-			(at 281.94 25.4 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "MP2331HGTL-Z"
-			(at 281.94 27.94 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "SOT583_MP2331H"
-			(at 261.62 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "MP2331HGTL-Z"
-			(at 261.62 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 261.62 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "eecbbfa4-a2e9-4b91-9821-7033f3ddd5b2")
-		)
-		(pin "4"
-			(uuid "e87c4026-9242-45a6-b736-4a265cb1c219")
-		)
-		(pin "3"
-			(uuid "2613db56-efd8-4b38-87ac-276d44a4e1fc")
-		)
-		(pin "8"
-			(uuid "933343e3-e68a-4a66-8c51-f6a02041d5a9")
-		)
-		(pin "1"
-			(uuid "f6a42736-89fe-4060-8e59-15e13186a679")
-		)
-		(pin "2"
-			(uuid "84af2a9f-2978-414f-b03c-93f350cf5b74")
-		)
-		(pin "7"
-			(uuid "693d331d-dbcb-4718-8db6-1d4c0247636b")
-		)
-		(pin "5"
-			(uuid "aacbe8e5-21c7-495a-8bb2-565b3fe00adb")
-		)
-		(instances
-			(project ""
-				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
-					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -35273,7 +35610,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 104.14 0)
 			(effects
 				(font
@@ -35461,7 +35798,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 105.41 0)
 			(effects
 				(font
@@ -35800,7 +36137,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 -6.35 0)
 			(effects
 				(font
@@ -35988,7 +36325,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 151.13 156.21 0)
 			(effects
 				(font
@@ -36144,7 +36481,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 374.65 40.64 0)
 			(effects
 				(font
@@ -36366,7 +36703,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 308.61 0)
 			(effects
 				(font
@@ -36554,7 +36891,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 214.63 0)
 			(effects
 				(font
@@ -36742,7 +37079,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 142.24 0)
 			(effects
 				(font
@@ -36930,7 +37267,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 307.34 0)
 			(effects
 				(font
@@ -37118,7 +37455,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 492.76 85.09 0)
 			(effects
 				(font
@@ -37306,7 +37643,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 523.24 85.09 0)
 			(effects
 				(font
@@ -37560,7 +37897,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 105.41 0)
 			(effects
 				(font
@@ -38011,7 +38348,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 207.01 133.35 0)
 			(effects
 				(font
@@ -38081,7 +38418,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm"
 			(at 77.47 241.3 0)
 			(effects
 				(font
@@ -38236,7 +38573,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 637.54 30.48 0)
 			(effects
 				(font
@@ -38424,7 +38761,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 579.12 198.12 0)
 			(effects
 				(font
@@ -38612,7 +38949,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 464.82 214.63 0)
 			(effects
 				(font
@@ -38800,7 +39137,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "P70-1000045R:HARWIN_P70-1000045R"
+		(property "Footprint" "Library:HARWIN_P70-1000045R"
 			(at 607.06 252.73 0)
 			(effects
 				(font
@@ -38986,7 +39323,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 172.72 161.29 0)
 			(effects
 				(font
