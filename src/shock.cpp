@@ -6,20 +6,16 @@ volatile unsigned long shockCounter = 0;
 // Timer config
 IntervalTimer shockTimer;
 
-#ifdef SHOCK_PULSE
-    int state = 0;
-#endif
-
-/* 
-    void countShock()
-
-    This function is used as a counter for sending out the shocking signals towards the corresponding y cell
-    The max count is the duration of the shock (ms) plus the duration of rest (ms), which resets the counter
-    to zero after.
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*
+* Timer function that counts up to the SHOCK_CYCLE and resets
 */
 void countShock(){
 
-    // Debug flag to check if the timer counts up to desired time period
+    //? Debug flag to check if the timer counts up to desired time period
     #ifdef SHOCK_TIMER
         Serial.printf("%dms... \n", shockCounter);
         if(shockCounter > DELTA_SHOCK + DELTA_REST - 1){
@@ -27,10 +23,18 @@ void countShock(){
         }
     #endif
 
+    // Counter for shocking
     if(shockCounter > SHOCK_CYCLE - 1) shockCounter = 0;
     shockCounter++;
 }
 
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*
+* This setup function sets up the pins and timers for this source file
+*/
 void shockSetup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
@@ -44,27 +48,25 @@ void shockSetup(){
     Serial.println("Shock Setup Complete");
 }
 
-/*
-    void inArea()
-    ! Place Holder for now to always return the first cell'
-    ? use a dictionary/set for the final lookup from the pins to the actual cell
-    ? Use a fifo for getting the cellPins for proper time efficiency
 
-    This function detects whether the corresponding fish is in the designated shock zone
-    and returns the zebra fish's corresponding y-cell as a number to lookup the correct pin
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*   Place holder for now
 */
 int inArea(){
     return CELL1;
 }
 
-/*
-    void sendShock(int cellPin)
-        int cellPin: The pin that corresponds to the cell that is being shocked
-    
-    This function sends out the signal to the corresponding cell based on the pin
-    ! Maybe have multiple counters that only go up after the time is done? and have
-    ! Multiple counters per section that only counts if its being triggered?
-
+/* void sendShock(int cellPin)
+* @brief Swaps polarity of shock signal
+* @param:
+*   int cellPin: The pin number of the gpio output for the corresponding cell
+* @return: NA
+! Maybe have multiple counters that only go up after the time is done? and have
+! Multiple counters per section that only counts if its being triggered?
+* This function sends out a shock signal based on the timer and pin parameter
 */
 void sendShock(int cellPin){
     #ifdef SHOCK_PULSE
