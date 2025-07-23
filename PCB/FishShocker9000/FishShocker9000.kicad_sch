@@ -5509,6 +5509,10 @@
 		(uuid "582ba762-472f-4ad0-a8d9-4228fa5a80db")
 	)
 	(no_connect
+		(at 36.83 139.7)
+		(uuid "6ec304aa-5444-464a-a8ee-4a2482190730")
+	)
+	(no_connect
 		(at 36.83 121.92)
 		(uuid "700ba012-447c-4baa-956c-cd5f8a77652d")
 	)
@@ -5541,6 +5545,10 @@
 		(uuid "a3bac885-e3f4-4126-9dc2-bdf19fb6429d")
 	)
 	(no_connect
+		(at 77.47 93.98)
+		(uuid "ad745666-abe2-40e0-8c61-7428d811af51")
+	)
+	(no_connect
 		(at 77.47 104.14)
 		(uuid "ae2dfa1d-cb91-4b30-818f-0c705d2b3292")
 	)
@@ -5571,6 +5579,10 @@
 	(no_connect
 		(at 36.83 114.3)
 		(uuid "cbaf6f6c-e83f-4599-a2ab-8ecac3e68995")
+	)
+	(no_connect
+		(at 36.83 142.24)
+		(uuid "cf3598f3-2670-4db4-9b75-064b879c9ebe")
 	)
 	(no_connect
 		(at 77.47 144.78)
@@ -9656,7 +9668,7 @@
 			)
 		)
 	)
-	(global_label "A1"
+	(global_label "A0"
 		(shape input)
 		(at 153.67 109.22 180)
 		(fields_autoplaced yes)
@@ -9722,7 +9734,7 @@
 			)
 		)
 	)
-	(global_label "A0"
+	(global_label "A1"
 		(shape input)
 		(at 135.89 99.06 180)
 		(fields_autoplaced yes)
@@ -9810,29 +9822,7 @@
 			)
 		)
 	)
-	(global_label "3.3v"
-		(shape input)
-		(at 77.47 93.98 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "36568406-e536-4a8d-abe8-a3a0c77bfe2d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 84.4466 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "A7"
+	(global_label "A6"
 		(shape input)
 		(at 285.75 163.83 180)
 		(fields_autoplaced yes)
@@ -10076,7 +10066,7 @@
 	)
 	(global_label "Plate 12.1"
 		(shape input)
-		(at 354.33 207.01 0)
+		(at 354.33 219.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10086,7 +10076,7 @@
 		)
 		(uuid "41b4fc75-c698-4194-9461-916b5393ba29")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 367.4146 207.01 0)
+			(at 367.4146 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10580,7 +10570,7 @@
 			)
 		)
 	)
-	(global_label "A3"
+	(global_label "A2"
 		(shape input)
 		(at 285.75 109.22 180)
 		(fields_autoplaced yes)
@@ -10756,28 +10746,6 @@
 			)
 		)
 	)
-	(global_label "RXD"
-		(shape input)
-		(at 36.83 139.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7f5227df-18fd-43cf-a178-38acad8d6942")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.0953 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Plate 5.2"
 		(shape input)
 		(at 441.96 118.11 180)
@@ -10932,7 +10900,7 @@
 			)
 		)
 	)
-	(global_label "A2"
+	(global_label "A3"
 		(shape input)
 		(at 266.7 99.06 180)
 		(fields_autoplaced yes)
@@ -11152,7 +11120,7 @@
 			)
 		)
 	)
-	(global_label "A9"
+	(global_label "A8"
 		(shape input)
 		(at 152.4 217.17 180)
 		(fields_autoplaced yes)
@@ -11262,7 +11230,7 @@
 			)
 		)
 	)
-	(global_label "A8"
+	(global_label "A9"
 		(shape input)
 		(at 134.62 207.01 180)
 		(fields_autoplaced yes)
@@ -11328,7 +11296,7 @@
 			)
 		)
 	)
-	(global_label "A4"
+	(global_label "A5"
 		(shape input)
 		(at 135.89 153.67 180)
 		(fields_autoplaced yes)
@@ -11394,7 +11362,7 @@
 			)
 		)
 	)
-	(global_label "A6"
+	(global_label "A7"
 		(shape input)
 		(at 266.7 153.67 180)
 		(fields_autoplaced yes)
@@ -11616,7 +11584,7 @@
 	)
 	(global_label "Plate 11.1"
 		(shape input)
-		(at 354.33 217.17 0)
+		(at 354.33 209.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11626,7 +11594,7 @@
 		)
 		(uuid "cc301a94-882a-4a5c-b241-36a2cb47b6ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 367.4146 217.17 0)
+			(at 367.4146 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11638,7 +11606,7 @@
 	)
 	(global_label "Plate 11.2"
 		(shape input)
-		(at 354.33 219.71 0)
+		(at 354.33 207.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11648,7 +11616,7 @@
 		)
 		(uuid "cea08c21-c357-45a2-b799-238de33c3395")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 367.4146 219.71 0)
+			(at 367.4146 207.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12274,7 +12242,7 @@
 			)
 		)
 	)
-	(global_label "A5"
+	(global_label "A4"
 		(shape input)
 		(at 152.4 163.83 180)
 		(fields_autoplaced yes)
@@ -12320,7 +12288,7 @@
 	)
 	(global_label "Plate 12.2"
 		(shape input)
-		(at 354.33 209.55 0)
+		(at 354.33 217.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12330,7 +12298,7 @@
 		)
 		(uuid "f6fb3c77-62af-40f0-bfa8-fbf1e6528745")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 367.4146 209.55 0)
+			(at 367.4146 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12419,28 +12387,6 @@
 		(uuid "fe2a481e-d0ca-462c-8c45-eaceeb11c9e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 296.4328 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TXD"
-		(shape input)
-		(at 36.83 142.24 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ffa2b051-38da-4ec0-8540-db7eb9698adf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.3977 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14519,7 +14465,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Bare_Metal_Element_L12.4mm_W4.8mm_P11.40mm"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 46.99 267.97 0)
 			(effects
 				(font
@@ -18183,7 +18129,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
 			(at 251.46 57.15 0)
 			(effects
 				(font
@@ -24612,7 +24558,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Bare_Metal_Element_L12.4mm_W4.8mm_P11.40mm"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 54.61 261.62 0)
 			(effects
 				(font
@@ -24682,7 +24628,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
 			(at 300.99 57.15 0)
 			(effects
 				(font
@@ -26411,7 +26357,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
 			(at 226.06 57.15 0)
 			(effects
 				(font
@@ -29108,7 +29054,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
 			(at 275.59 57.15 0)
 			(effects
 				(font
