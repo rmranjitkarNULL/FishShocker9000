@@ -1,29 +1,10 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 5,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
-    "hidden_nets": [
-      "Plate 4.1",
-      "Plate 4.2",
-      "Plate 5.2",
-      "Plate 6.2",
-      "Plate 6.1",
-      "Plate 5.1",
-      "Plate 8.2",
-      "Plate 7.1",
-      "Plate 8.1",
-      "Plate 7.2",
-      "Plate 9.2",
-      "Plate 10.1",
-      "Plate 9.1",
-      "Plate 10.2",
-      "Plate 12.1",
-      "Plate 12.2",
-      "Plate 11.1",
-      "Plate 11.2"
-    ],
+    "hidden_nets": [],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
