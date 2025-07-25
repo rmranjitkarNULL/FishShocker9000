@@ -6672,7 +6672,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 33.02) (xy 91.44 35.56)
+			(xy 91.44 31.75) (xy 91.44 35.56)
 		)
 		(stroke
 			(width 0)
@@ -9742,7 +9742,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 21.59) (xy 91.44 27.94)
+			(xy 91.44 21.59) (xy 91.44 26.67)
 		)
 		(stroke
 			(width 0)
@@ -38046,7 +38046,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 91.44 30.48 180)
+		(at 91.44 29.21 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -38055,7 +38055,7 @@
 		(fields_autoplaced yes)
 		(uuid "ad639037-66eb-47d5-8fb0-d0ef600f7093")
 		(property "Reference" "R7"
-			(at 93.98 29.2099 0)
+			(at 93.98 27.9399 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -38064,7 +38064,7 @@
 			)
 		)
 		(property "Value" "330"
-			(at 93.98 31.7499 0)
+			(at 93.98 30.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38073,7 +38073,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 91.44 30.48 0)
+			(at 91.44 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38082,7 +38082,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 91.44 30.48 0)
+			(at 91.44 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38091,7 +38091,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 91.44 30.48 0)
+			(at 91.44 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
