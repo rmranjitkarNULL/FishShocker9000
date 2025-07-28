@@ -6161,6 +6161,10 @@
 		(uuid "7862c190-a618-4afe-abf2-d298dff44d50")
 	)
 	(no_connect
+		(at 77.47 187.96)
+		(uuid "7bc9f4b1-164a-49b9-980b-b1b9b150247a")
+	)
+	(no_connect
 		(at 77.47 121.92)
 		(uuid "7e04d65e-0745-4bd8-bc45-b47de0d6f253")
 	)
@@ -7211,16 +7215,6 @@
 			(type default)
 		)
 		(uuid "31634c5f-be58-4f62-af41-052609cdee96")
-	)
-	(wire
-		(pts
-			(xy 77.47 187.96) (xy 81.28 187.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32470e12-6d51-40e7-afaf-b5382943c218")
 	)
 	(wire
 		(pts
@@ -10241,16 +10235,6 @@
 			(type default)
 		)
 		(uuid "c908e2c0-16a8-4166-83f1-ca2f851ee266")
-	)
-	(wire
-		(pts
-			(xy 81.28 187.96) (xy 81.28 191.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9c1f9bf-e74a-495b-8433-fde34d73b925")
 	)
 	(wire
 		(pts
@@ -39125,72 +39109,6 @@
 			(project "FishShocker9000"
 				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
 					(reference "J79")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 81.28 191.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b69e74cd-1d6e-4f26-9932-1e6f767db240")
-		(property "Reference" "#PWR061"
-			(at 81.28 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 81.28 196.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 81.28 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "af1fce9b-8551-4461-a5a0-e751d509afed")
-		)
-		(instances
-			(project "FishShocker9000"
-				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
-					(reference "#PWR061")
 					(unit 1)
 				)
 			)
