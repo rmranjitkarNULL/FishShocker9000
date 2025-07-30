@@ -2320,157 +2320,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:FerriteBead_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "FB"
-				(at 1.905 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "FerriteBead_Small"
-				(at 1.905 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Ferrite bead, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "L ferrite bead inductor filter"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "FerriteBead_Small_0_1"
-				(polyline
-					(pts
-						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.889) (xy 0 1.2954)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.27) (xy 0 -0.7874)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "FerriteBead_Small_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -5195,6 +5044,12 @@
 			)
 		)
 		(uuid "fb36ff1f-2f1b-430e-85cc-63b2b7453261")
+	)
+	(junction
+		(at 168.91 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "013a1b9f-42c2-4294-8f59-7ea007e97f42")
 	)
 	(junction
 		(at 577.85 118.11)
@@ -8608,6 +8463,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 38.1) (xy 191.77 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "792063af-dc3a-4043-aeb1-691cda5bc796")
+	)
+	(wire
+		(pts
 			(xy 203.2 82.55) (xy 203.2 93.98)
 		)
 		(stroke
@@ -10118,7 +9983,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 38.1) (xy 176.53 38.1)
+			(xy 168.91 38.1) (xy 161.29 38.1)
 		)
 		(stroke
 			(width 0)
@@ -10225,16 +10090,6 @@
 			(type default)
 		)
 		(uuid "c8ee3382-71fc-40eb-9f04-39174984e06f")
-	)
-	(wire
-		(pts
-			(xy 181.61 38.1) (xy 191.77 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c908e2c0-16a8-4166-83f1-ca2f851ee266")
 	)
 	(wire
 		(pts
@@ -14544,7 +14399,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 250.19 0)
 			(effects
 				(font
@@ -14732,7 +14587,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 214.63 0)
 			(effects
 				(font
@@ -14920,7 +14775,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 270.51 0)
 			(effects
 				(font
@@ -15108,7 +14963,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 196.85 0)
 			(effects
 				(font
@@ -15366,7 +15221,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 -7.62 0)
 			(effects
 				(font
@@ -15744,7 +15599,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 250.19 0)
 			(effects
 				(font
@@ -16001,7 +15856,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 251.46 0)
 			(effects
 				(font
@@ -16189,7 +16044,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 85.09 0)
 			(effects
 				(font
@@ -16377,7 +16232,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 196.85 0)
 			(effects
 				(font
@@ -16641,7 +16496,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 27.94 0)
 			(effects
 				(font
@@ -16829,7 +16684,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 250.19 0)
 			(effects
 				(font
@@ -17017,7 +16872,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 213.36 0)
 			(effects
 				(font
@@ -17205,7 +17060,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 250.19 0)
 			(effects
 				(font
@@ -17393,7 +17248,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 -7.62 0)
 			(effects
 				(font
@@ -17647,7 +17502,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 29.21 0)
 			(effects
 				(font
@@ -17835,7 +17690,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 213.36 0)
 			(effects
 				(font
@@ -18023,7 +17878,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 306.07 0)
 			(effects
 				(font
@@ -18413,7 +18268,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 48.26 0)
 			(effects
 				(font
@@ -18667,7 +18522,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 104.14 0)
 			(effects
 				(font
@@ -18855,7 +18710,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 46.99 0)
 			(effects
 				(font
@@ -19109,7 +18964,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 102.87 0)
 			(effects
 				(font
@@ -19507,7 +19362,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 27.94 0)
 			(effects
 				(font
@@ -19695,7 +19550,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 29.21 0)
 			(effects
 				(font
@@ -19883,7 +19738,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 102.87 0)
 			(effects
 				(font
@@ -20071,7 +19926,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 104.14 0)
 			(effects
 				(font
@@ -20259,7 +20114,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 213.36 0)
 			(effects
 				(font
@@ -20447,7 +20302,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 214.63 0)
 			(effects
 				(font
@@ -20747,7 +20602,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 29.21 0)
 			(effects
 				(font
@@ -21448,7 +21303,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 158.75 0)
 			(effects
 				(font
@@ -21702,7 +21557,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 195.58 0)
 			(effects
 				(font
@@ -21890,7 +21745,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 307.34 0)
 			(effects
 				(font
@@ -22078,7 +21933,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 27.94 0)
 			(effects
 				(font
@@ -22266,7 +22121,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 270.51 0)
 			(effects
 				(font
@@ -22519,7 +22374,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 307.34 0)
 			(effects
 				(font
@@ -23233,7 +23088,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 85.09 0)
 			(effects
 				(font
@@ -23499,7 +23354,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 48.26 0)
 			(effects
 				(font
@@ -23687,7 +23542,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 -8.89 0)
 			(effects
 				(font
@@ -24076,7 +23931,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 158.75 0)
 			(effects
 				(font
@@ -24264,7 +24119,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 83.82 0)
 			(effects
 				(font
@@ -24452,7 +24307,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 270.51 0)
 			(effects
 				(font
@@ -24640,7 +24495,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 160.02 0)
 			(effects
 				(font
@@ -24828,7 +24683,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 -7.62 0)
 			(effects
 				(font
@@ -25082,7 +24937,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 307.34 0)
 			(effects
 				(font
@@ -25270,7 +25125,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 102.87 0)
 			(effects
 				(font
@@ -25458,7 +25313,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 -8.89 0)
 			(effects
 				(font
@@ -25959,7 +25814,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 196.85 0)
 			(effects
 				(font
@@ -26147,7 +26002,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 213.36 0)
 			(effects
 				(font
@@ -26413,7 +26268,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 139.7 0)
 			(effects
 				(font
@@ -26748,7 +26603,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 139.7 0)
 			(effects
 				(font
@@ -27005,7 +26860,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 48.26 0)
 			(effects
 				(font
@@ -27262,7 +27117,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 195.58 0)
 			(effects
 				(font
@@ -27582,7 +27437,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 251.46 0)
 			(effects
 				(font
@@ -27770,7 +27625,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 270.51 0)
 			(effects
 				(font
@@ -27958,7 +27813,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 160.02 0)
 			(effects
 				(font
@@ -28212,7 +28067,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 -7.62 0)
 			(effects
 				(font
@@ -28469,7 +28324,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 140.97 0)
 			(effects
 				(font
@@ -28839,7 +28694,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 83.82 0)
 			(effects
 				(font
@@ -29027,7 +28882,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 214.63 0)
 			(effects
 				(font
@@ -29293,7 +29148,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 29.21 0)
 			(effects
 				(font
@@ -29481,7 +29336,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 140.97 0)
 			(effects
 				(font
@@ -29669,7 +29524,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 104.14 0)
 			(effects
 				(font
@@ -29857,7 +29712,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 27.94 0)
 			(effects
 				(font
@@ -30178,7 +30033,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 46.99 0)
 			(effects
 				(font
@@ -30584,7 +30439,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 251.46 0)
 			(effects
 				(font
@@ -30772,7 +30627,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 83.82 0)
 			(effects
 				(font
@@ -30960,7 +30815,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 46.99 0)
 			(effects
 				(font
@@ -31148,7 +31003,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 139.7 0)
 			(effects
 				(font
@@ -31336,7 +31191,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 48.26 0)
 			(effects
 				(font
@@ -31524,7 +31379,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 196.85 0)
 			(effects
 				(font
@@ -31712,7 +31567,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 195.58 0)
 			(effects
 				(font
@@ -31974,7 +31829,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 306.07 0)
 			(effects
 				(font
@@ -32162,7 +32017,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 -8.89 0)
 			(effects
 				(font
@@ -32630,7 +32485,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 306.07 0)
 			(effects
 				(font
@@ -32884,7 +32739,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 213.36 0)
 			(effects
 				(font
@@ -33072,7 +32927,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 251.46 0)
 			(effects
 				(font
@@ -33260,7 +33115,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 213.36 0)
 			(effects
 				(font
@@ -33448,7 +33303,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 251.46 0)
 			(effects
 				(font
@@ -33636,7 +33491,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 307.34 0)
 			(effects
 				(font
@@ -33824,7 +33679,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 -7.62 0)
 			(effects
 				(font
@@ -34012,7 +33867,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 -7.62 0)
 			(effects
 				(font
@@ -34200,7 +34055,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 -8.89 0)
 			(effects
 				(font
@@ -34523,7 +34378,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 48.26 0)
 			(effects
 				(font
@@ -34711,7 +34566,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 83.82 0)
 			(effects
 				(font
@@ -34899,7 +34754,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 102.87 0)
 			(effects
 				(font
@@ -35087,7 +34942,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 269.24 0)
 			(effects
 				(font
@@ -35275,7 +35130,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 85.09 0)
 			(effects
 				(font
@@ -35463,7 +35318,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 269.24 0)
 			(effects
 				(font
@@ -35717,7 +35572,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 251.46 0)
 			(effects
 				(font
@@ -35905,7 +35760,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 270.51 0)
 			(effects
 				(font
@@ -36093,7 +35948,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 139.7 0)
 			(effects
 				(font
@@ -36359,7 +36214,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 269.24 0)
 			(effects
 				(font
@@ -36613,7 +36468,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 139.7 0)
 			(effects
 				(font
@@ -36801,7 +36656,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 46.99 0)
 			(effects
 				(font
@@ -37055,7 +36910,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 195.58 0)
 			(effects
 				(font
@@ -37243,7 +37098,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 46.99 0)
 			(effects
 				(font
@@ -37431,7 +37286,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 29.21 0)
 			(effects
 				(font
@@ -37689,7 +37544,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 269.24 0)
 			(effects
 				(font
@@ -37877,7 +37732,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 104.14 0)
 			(effects
 				(font
@@ -38132,7 +37987,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 307.34 0)
 			(effects
 				(font
@@ -38390,7 +38245,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 83.82 0)
 			(effects
 				(font
@@ -38578,7 +38433,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 158.75 0)
 			(effects
 				(font
@@ -38766,7 +38621,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 140.97 0)
 			(effects
 				(font
@@ -38954,7 +38809,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 29.21 0)
 			(effects
 				(font
@@ -39208,7 +39063,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 802.64 158.75 0)
 			(effects
 				(font
@@ -39396,7 +39251,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 306.07 0)
 			(effects
 				(font
@@ -39785,7 +39640,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 269.24 0)
 			(effects
 				(font
@@ -40042,7 +39897,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 196.85 0)
 			(effects
 				(font
@@ -40230,7 +40085,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 269.24 0)
 			(effects
 				(font
@@ -40418,7 +40273,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 160.02 0)
 			(effects
 				(font
@@ -40675,7 +40530,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 214.63 0)
 			(effects
 				(font
@@ -40863,7 +40718,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 140.97 0)
 			(effects
 				(font
@@ -41120,7 +40975,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 549.91 160.02 0)
 			(effects
 				(font
@@ -41377,7 +41232,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 196.85 0)
 			(effects
 				(font
@@ -41643,7 +41498,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 160.02 0)
 			(effects
 				(font
@@ -42052,74 +41907,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:FerriteBead_Small")
-		(at 179.07 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf495db0-927c-49b6-91c9-06dae9cb3285")
-		(property "Reference" "FB1"
-			(at 179.0319 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "600 @ 600 MHz"
-			(at 179.0319 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
-			(at 179.07 39.878 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 179.07 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Ferrite bead, small symbol"
-			(at 179.07 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0cc7d0fa-bbcd-4a64-827c-93d962783cbc")
-		)
-		(pin "2"
-			(uuid "f8b6189d-5643-49a9-b942-c7110bf09f1a")
-		)
-		(instances
-			(project "FishShocker9000"
-				(path "/1c185f74-5dfc-4a92-a3ad-4e1ef719d398"
-					(reference "FB1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "P70-1000045R:P70-1000045R")
 		(at 681.99 27.94 270)
 		(unit 1)
@@ -42147,7 +41934,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 27.94 0)
 			(effects
 				(font
@@ -42548,7 +42335,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 85.09 0)
 			(effects
 				(font
@@ -42972,7 +42759,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 160.02 0)
 			(effects
 				(font
@@ -43160,7 +42947,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 306.07 0)
 			(effects
 				(font
@@ -43348,7 +43135,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 140.97 0)
 			(effects
 				(font
@@ -43603,7 +43390,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 83.82 0)
 			(effects
 				(font
@@ -43791,7 +43578,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 48.26 0)
 			(effects
 				(font
@@ -43979,7 +43766,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 104.14 0)
 			(effects
 				(font
@@ -44167,7 +43954,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 102.87 0)
 			(effects
 				(font
@@ -44421,7 +44208,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 -8.89 0)
 			(effects
 				(font
@@ -44746,7 +44533,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 833.12 158.75 0)
 			(effects
 				(font
@@ -44934,7 +44721,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 250.19 0)
 			(effects
 				(font
@@ -45200,7 +44987,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 -8.89 0)
 			(effects
 				(font
@@ -45596,7 +45383,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 270.51 0)
 			(effects
 				(font
@@ -45784,7 +45571,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 306.07 0)
 			(effects
 				(font
@@ -45972,7 +45759,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 214.63 0)
 			(effects
 				(font
@@ -46160,7 +45947,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 139.7 0)
 			(effects
 				(font
@@ -46348,7 +46135,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 307.34 0)
 			(effects
 				(font
@@ -46536,7 +46323,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 158.75 0)
 			(effects
 				(font
@@ -46724,7 +46511,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 492.76 85.09 0)
 			(effects
 				(font
@@ -46912,7 +46699,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 46.99 0)
 			(effects
 				(font
@@ -47100,7 +46887,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 608.33 140.97 0)
 			(effects
 				(font
@@ -47288,7 +47075,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 577.85 104.14 0)
 			(effects
 				(font
@@ -47476,7 +47263,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 523.24 85.09 0)
 			(effects
 				(font
@@ -47664,7 +47451,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 102.87 0)
 			(effects
 				(font
@@ -48065,7 +47852,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 740.41 27.94 0)
 			(effects
 				(font
@@ -48253,7 +48040,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 681.99 195.58 0)
 			(effects
 				(font
@@ -48441,7 +48228,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 774.7 195.58 0)
 			(effects
 				(font
@@ -48629,7 +48416,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 464.82 214.63 0)
 			(effects
 				(font
@@ -48817,7 +48604,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Library:HARWIN_P70-1000045R"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 709.93 250.19 0)
 			(effects
 				(font
