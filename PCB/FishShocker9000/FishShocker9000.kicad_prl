@@ -4,7 +4,9 @@
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
-    "hidden_nets": [],
+    "hidden_nets": [
+      "Plate 2.1"
+    ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
@@ -13,7 +15,7 @@
       "shapes": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
-      "zones": 0.6
+      "zones": 0.10000000149011612
     },
     "selection_filter": {
       "dimensions": true,
@@ -43,7 +45,6 @@
       "drawing_sheet",
       "bitmaps",
       "pads",
-      "zones",
       "drc_warnings",
       "locked_item_shadows",
       "conflict_shadows",
