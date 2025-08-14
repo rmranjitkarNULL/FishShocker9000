@@ -1,0 +1,1 @@
+[('J1', '/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels/Connector_BarrelJack.3dshapes/BarrelJack_CLIFF_FC681465S_SMT_Horizontal.step')]
