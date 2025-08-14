@@ -8,15 +8,24 @@
 SerialTransfer myTransfer;
 
 // Cells
-Cell LED = {LED_BUILTIN};
-Cell cell_1 ={CELL1};
-Cell cell_2 ={CELL2};
-Cell cell_3 ={CELL3};
-Cell cell_4 ={CELL4};
-Cell cell_5 ={CELL5};
+Cell cell_1 = {CELL1};
+Cell cell_2 = {CELL2};
+Cell cell_3 = {CELL3};
+Cell cell_4 = {CELL4};
+Cell cell_5 = {CELL5};
+Cell cell_6 = {CELL6};
+Cell cell_7 = {CELL7};
+Cell cell_8 = {CELL8};
+Cell cell_9 = {CELL9};
+Cell cell_10 = {CELL10};
+Cell cell_11 = {CELL11};
+Cell cell_12 = {CELL12};
 
-const Cell* CELLS[] = {&LED, &cell_1, &cell_2, &cell_3, &cell_4, &cell_5};
-const uint8_t NUM_CELLS = sizeof(CELLS) / sizeof(CELLS[0]);
+
+Cell* cells[] = {&cell_1, &cell_2, &cell_3, &cell_4, &cell_5, &cell_6,
+                       &cell_7, &cell_8, &cell_9, &cell_10, &cell_11, &cell_12};
+                       
+const uint8_t NUM_CELLS = sizeof(cells) / sizeof(cells[0]);
 
 void setup() {
 
@@ -33,10 +42,6 @@ void setup() {
 
   // Initialize Serial for python script
   myTransfer.begin(Serial);
-
-  // ? debugging
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);
 
   Serial.println("FishShocker9000: Setup Complete\n");
 } 
@@ -57,6 +62,8 @@ void loop() {
   //   // Save recievbed data to circular buffer
   //   myTransfer.rxObj(cell_id);
   // }
+
+  
 
 }
 

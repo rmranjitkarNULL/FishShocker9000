@@ -9,16 +9,17 @@
 #define SHOCK_CYCLE (DELTA_SHOCK + DELTA_REST)           // Shock cycle period
 #define SHOCK_TIMER_INTERVAL 1000                        // Timer configuration for shock timer, triggers every 1ms
 #define CELL1 A0                                         // Pinout for sending signal
-#define CELL2 A1                                         // Pinout for sending signal
+//#define CELL2 A1                                         // Pinout for sending signal
 #define CELL3 A2                                         // Pinout for sending signal
 #define CELL4 A3                                         // Pinout for sending signal
 #define CELL5 A4                                         // Pinout for sending signal
-
-// Timer Object
-extern IntervalTimer shock_timer;
-
-// Global Variables
-extern volatile uint32_t shock_counter;
+#define CELL6 A5                                         // Pinout for sending signal
+#define CELL7 A6                                         // Pinout for sending signal
+#define CELL8 A7                                         // Pinout for sending signal
+#define CELL9 A8                                         // Pinout for sending signal
+#define CELL10 A9                                        // Pinout for sending signal
+#define CELL11 A10                                       // Pinout for sending signal
+#define CELL12 A11                                       // Pinout for sending signal
 
 // Cell Struct
 struct Cell{
@@ -27,6 +28,15 @@ struct Cell{
     bool shock_on = false;
     uint32_t last_toggle_time = 0;
 };
+
+// Timer Object
+extern IntervalTimer shock_timer;
+
+// Global Variables
+extern volatile uint32_t shock_counter;
+
+extern Cell* cells[];
+extern const uint8_t NUM_CELLS;
 
 // Function Prototypes
 

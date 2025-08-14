@@ -6,13 +6,6 @@ volatile unsigned long shockCounter = 0;
 // Timer config
 IntervalTimer shockTimer;
 
-/* void countShock()
-* @brief Swaps polarity of shock signal
-* @param: NA
-* @return: NA
-*
-* Timer function that counts up to the SHOCK_CYCLE and resets
-*/
 void countShock(){
 
     //? Debug flag to check if the timer counts up to desired time period
@@ -28,18 +21,15 @@ void countShock(){
     shockCounter++;
 }
 
-/* void countShock()
-* @brief Swaps polarity of shock signal
-* @param: NA
-* @return: NA
-*
-* This setup function sets up the pins and timers for this source file
-*/
 void shock_setup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
-    pinMode(CELL1, OUTPUT);
-    digitalWrite(CELL1, LOW);
+    
+    for(int i = 0; i < NUM_CELLS; i++){
+        pinMode(cells[i]->cell_id, OUTPUT);
+        digitalWrite(cells[i]->cell_id, HIGH);
+    }
+
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
@@ -48,13 +38,6 @@ void shock_setup(){
     Serial.println("Shock Setup Complete");
 }
 
-
-/* void countShock()
-* @brief Swaps polarity of shock signal
-* @param: NA
-* @return: NA
-*   Place holder for now
-*/
 int inArea(){
     return CELL1;
 }
