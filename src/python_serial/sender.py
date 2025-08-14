@@ -1,25 +1,26 @@
 import time
 import keyboard
 import re
-import serial
+import serial.tools.list_ports
 
 from pySerialTransfer import pySerialTransfer as txfer
 
-
-SERIAL_PORT = 'COM3'
+# This is dependent on the device and port slot you've selected
+SERIAL_PORT = "/dev/cu.usbmodem179783401"
 
 if __name__ == '__main__':
     try:
+        
         link = txfer.SerialTransfer(SERIAL_PORT)
         
         link.open()
         
-        time.sleep(2)
+        time.sleep(3)
         print("Ready to send inputs...")
         
         while True:
                 
-            if re.fullmatch("^[0-9]+$", keyboard.read_key()):
+            if re.fullmatch("^[0-9]+$", str(keyboard.read_key())):
                 send_size = 0
             	
                 list_ = int(keyboard.read_key())

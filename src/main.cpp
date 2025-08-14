@@ -38,35 +38,38 @@ void setup() {
   shock_setup();
 
   // Initialize polarity setup (Pins, Timers, etc.)
-  polarity_setup();
+  // polarity_setup();
 
   // Initialize Serial for python script
   myTransfer.begin(Serial);
 
-  Serial.println("FishShocker9000: Setup Complete\n");
+  //? Debug LED
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
+
+  Serial.println("\nFishShocker9000: Setup Complete\n");
 } 
 
 void loop() {
  
-  // // * This will become a CAN Interrupt in the future. Potentially need FIFO for that.
-  // if(myTransfer.available())
-  // {
-  //   uint16_t cell_id;
+  if(myTransfer.available())
+  {
+    // Declare Variable to store 
+    uint16_t data;
+    uint16_t value;
 
-  //   // send all received data back to Python
-  //   for(uint16_t i=0; i < myTransfer.bytesRead; i++)
-  //     myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
+    // send all received data back to Python
+    for(uint16_t i=0; i < myTransfer.bytesRead; i++)
+      myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
     
-  //   myTransfer.sendData(myTransfer.bytesRead);
+    myTransfer.sendData(myTransfer.bytesRead);
 
-  //   // Save recievbed data to circular buffer
-  //   myTransfer.rxObj(cell_id);
-  // }
+    myTransfer.rxObj(data);
+    value = int(data);
 
-  
-
+    if(value == 1){
+      digitalWrite(LED_BUILTIN, !(digitalRead(LED_BUILTIN)));
+    }
+  }
 }
 
-// Test new timing to make sure it works
-// Add Fifo for can
-// ensure everything works and create a demo for it

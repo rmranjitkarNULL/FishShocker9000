@@ -1,7 +1,7 @@
 #include "shock.h"
 
 // Global Variables
-volatile unsigned long shockCounter = 0;
+volatile uint32_t shockCounter = 0;
 
 // Timer config
 IntervalTimer shockTimer;
@@ -16,8 +16,6 @@ void countShock(){
         }
     #endif
 
-    // Counter for shocking
-    if(shockCounter > SHOCK_CYCLE - 1) shockCounter = 0;
     shockCounter++;
 }
 
@@ -25,6 +23,7 @@ void shock_setup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
     
+    // * Make LEDS do a cool bootup animation...?
     for(int i = 0; i < NUM_CELLS; i++){
         pinMode(cells[i]->cell_id, OUTPUT);
         digitalWrite(cells[i]->cell_id, HIGH);
@@ -34,6 +33,23 @@ void shock_setup(){
 
     // Initializing Timer
     shockTimer.begin(countShock, SHOCK_TIMER_INTERVAL);
+
+    // LED Timer setup
+    uint16_t lastTime = shockCounter;
+    uint8_t cell_marker = 0;
+    bool isBooting = true;
+    while(isBooting){
+        // Get last 16 bits of shockCounter for same type int conversion
+        if((shockCounter & 0xFFFF) - lastTime > 250){
+            digitalWrite(cells[cell_marker]->cell_id, LOW);
+            lastTime = shockCounter;
+            cell_marker++;
+
+            if(cell_marker == 12) isBooting = false;
+        }
+    }
+
+
     Serial.println("Timer Initialized...");
     Serial.println("Shock Setup Complete");
 }
