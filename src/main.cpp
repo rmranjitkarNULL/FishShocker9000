@@ -36,26 +36,28 @@ void setup() {
 
   // ? debugging
   pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 
   Serial.println("FishShocker9000: Setup Complete\n");
 } 
 
 void loop() {
  
-  // * This will become a CAN Interrupt in the future. Potentially need FIFO for that.
-  if(myTransfer.available())
-  {
-    uint16_t cell_id;
+  // // * This will become a CAN Interrupt in the future. Potentially need FIFO for that.
+  // if(myTransfer.available())
+  // {
+  //   uint16_t cell_id;
 
-    // send all received data back to Python
-    for(uint16_t i=0; i < myTransfer.bytesRead; i++)
-      myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
+  //   // send all received data back to Python
+  //   for(uint16_t i=0; i < myTransfer.bytesRead; i++)
+  //     myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
     
-    myTransfer.sendData(myTransfer.bytesRead);
+  //   myTransfer.sendData(myTransfer.bytesRead);
 
-    // Save recievbed data to circular buffer
-    myTransfer.rxObj(cell_id);
-  }
+  //   // Save recievbed data to circular buffer
+  //   myTransfer.rxObj(cell_id);
+  // }
+
 }
 
 // Test new timing to make sure it works
