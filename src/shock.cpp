@@ -35,7 +35,7 @@ void countShock(){
 *
 * This setup function sets up the pins and timers for this source file
 */
-void shockSetup(){
+void shock_setup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
     pinMode(CELL1, OUTPUT);
@@ -43,7 +43,7 @@ void shockSetup(){
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
-    shockTimer.begin(countShock, shockTimerInterval);
+    shockTimer.begin(countShock, SHOCK_TIMER_INTERVAL);
     Serial.println("Timer Initialized...");
     Serial.println("Shock Setup Complete");
 }
@@ -69,19 +69,12 @@ int inArea(){
 * This function sends out a shock signal based on the timer and pin parameter
 */
 void sendShock(int cellPin){
-    #ifdef SHOCK_PULSE
-        Serial.print(">State:");
-        Serial.println(state);
-
-        Serial.print(">Time (ms):");
-        Serial.println(shockCounter);
-    #endif
 
     // Send a shock if the counter is less then deltaShock
     if(shockCounter < DELTA_SHOCK - 1) {
         digitalWrite(cellPin, HIGH);
 
-        #ifdef SHOCK_PULSECan you 
+        #ifdef SHOCK_PULSE
             Serial.printf("Sending shock to pin %d: %dms\n", cellPin, shockCounter);
             state = 1;
         #endif
