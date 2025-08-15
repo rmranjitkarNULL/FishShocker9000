@@ -22,12 +22,6 @@ void writeDAC(float voltage){
     digitalWrite(DAC_CS, HIGH); // Write CS High to latch the data
 }
 
-void voltageOff(){
-    digitalWrite(DAC_CS, LOW);
-    SPI.transfer16(0);
-    digitalWrite(DAC_CS, HIGH);
-}
-
 uint16_t valToBytes(int DACVal){
     uint8_t commandByte = 0x00 | (DACVal >> 2);                     // Upper byte (PD Bits + D7 - D2)
     uint8_t dataByte = (DACVal & 0x03) << 6;                        // Lower Byte (D1 - D0 + 0 Pads)
