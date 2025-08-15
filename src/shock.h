@@ -30,11 +30,10 @@ struct Cell{
 };
 
 // Timer Object
-extern IntervalTimer shock_timer;
+extern IntervalTimer shockTimer;
 
 // Global Variables
 extern volatile uint32_t shockCounter;
-
 extern Cell* cells[];
 extern const uint8_t NUM_CELLS;
 
