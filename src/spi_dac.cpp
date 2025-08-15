@@ -9,10 +9,11 @@ void DACSetup(){
 
 void writeDAC(float voltage){
 
+    // ! Draw this out to confirm equation
     // Write the desired voltage to the dac
     voltage = max(0.0f, min(voltage, MAX_VOLTAGE));     // Clamp voltage to be between 0-21
     float DACVoltage = voltage / AMP_GAIN;
-    uint8_t DACVal = (DACVoltage * MAX_VAL) / VREF;     // ! Draw this out to confirm equation
+    uint8_t DACVal = (DACVoltage * MAX_VAL) / VREF;    
 
     // Convert Value to DAC Bytes
     uint16_t bitFrame = valToBytes(DACVal);

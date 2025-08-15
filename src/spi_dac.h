@@ -42,6 +42,6 @@ void writeDAC(float voltage);
  * Datasheet: https://www.ti.com/product/DAC5311#tech-docs
  *  
  * @param: int DACVal - value ot be converted to bits, between 0 and DAC bit size
- * @return: NA
+ * @return: uint16_t bitFrame - the frame that includes desired bytes for the DAC protocol
  */
 uint16_t valToBytes(int DACVal);
