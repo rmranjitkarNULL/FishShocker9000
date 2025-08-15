@@ -33,6 +33,8 @@ void send_signal(Cell *cell, int level) {
     }
 }
 
+
+// Comment
 void control_shock(Cell *cell){
     uint32_t curr_time = shock_counter;
 
