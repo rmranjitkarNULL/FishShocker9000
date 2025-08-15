@@ -74,12 +74,3 @@ void loop() {
   }
 }
 
-/*
-Sudo code for format
-Event driven
-Constantly monitor keyboiard press.
-  If one of the keys is pressed and it corresponds to a cell shock that, toggle cell shock
-  if one of the keys is pressed and it corresponds to the DAC and changing voltage, ask for a number and change the DAC output
-  else ignore keypress
-*/
-
