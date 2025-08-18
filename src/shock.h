@@ -38,7 +38,6 @@ extern volatile uint32_t shockCounter;
 extern Cell* cells[];
 extern const uint8_t NUM_CELLS;
 
-// Function Prototypes
 
 /* void count_shock()
  * @brief Timer callback function that increments the shock counter
@@ -50,7 +49,7 @@ extern const uint8_t NUM_CELLS;
  * @param: NA
  * @return: NA
  */
-void count_shock();
+void countShock();
 
 /* void shock_setup()
  * @brief Initializes GPIO pins and timer for the shock mechanism
@@ -61,7 +60,7 @@ void count_shock();
  * @param: NA
  * @return: NA
  */
-void shock_setup();
+void shockSetup();
 
 /* void send_signal(Cell *cell, int level)
  * @brief Sends a HIGH or LOW to the corresponding pin
@@ -74,7 +73,7 @@ void shock_setup();
  * @param: int level - HIGH or LOW (3.3v or 0v)
  * @return: NA
  */
-void send_signal(Cell *cell, int level);
+void sendSignal(Cell *cell, int level);
 
 /* void control_shock(Cell *cell)
  * @brief Controls the shock being sent out
@@ -85,7 +84,7 @@ void send_signal(Cell *cell, int level);
  * @param: Cell *cell - Cell to send the signal to
  * @return: NA
  */
-void control_shock(Cell *cell);
+void controlShock(Cell *cell);
 
 /* void check_start(Cell *cell)
  * @brief Checks if the cell is just starting a shock
@@ -96,7 +95,7 @@ void control_shock(Cell *cell);
  * @param: Cell *cell - Cell to send the signal to
  * @return: Bool
  */
-bool check_start(Cell *cell);
+bool checkStart(Cell *cell);
 
 /* void check_shock(Cell *cell, uint32_t curr_time)
  * @brief Checks if the fish has been shocked for the delta shock time
@@ -107,7 +106,7 @@ bool check_start(Cell *cell);
  * @param: uint32_t time -> The "Current" time at this function call
  * @return: Bool
  */
-bool check_shock(Cell *cell, uint32_t curr_time);
+bool checkShock(Cell *cell, uint32_t curr_time);
 
 /* void check_rest(Cell *cell, uint32_t curr_time)
  * @brief Checks if the fish has not been shocked for the delta rest time
@@ -118,4 +117,4 @@ bool check_shock(Cell *cell, uint32_t curr_time);
  * @param: uint32_t time -> The "Current" time at this function call
  * @return: NA
  */
-bool check_rest(Cell *cell, uint32_t curr_time);
+bool checkRest(Cell *cell, uint32_t curr_time);

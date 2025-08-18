@@ -1,59 +1,52 @@
 #include "shock.h"
 
 // Global Variables
-volatile uint32_t shockCounter = 0;
+volatile unsigned long shockCounter = 0;
 
 // Timer config
 IntervalTimer shockTimer;
 
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*
+* Timer function that counts up to the SHOCK_CYCLE and resets
+*/
 void countShock(){
 
-    //? Debug flag to check if the timer counts up to desired time period
-    #ifdef SHOCK_TIMER
-        Serial.printf("%dms... \n", shockCounter);
-        if(shockCounter > DELTA_SHOCK + DELTA_REST - 1){
-            return;
-        }
-    #endif
-
+    // Counter for shocking
+    if(shockCounter > SHOCK_CYCLE - 1) shockCounter = 0;
     shockCounter++;
 }
 
-void shock_setup(){
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*
+* This setup function sets up the pins and timers for this source file
+*/
+void shockSetup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
-    
-    // * Make LEDS do a cool bootup animation...?
-    for(int i = 0; i < NUM_CELLS; i++){
-        pinMode(cells[i]->cell_id, OUTPUT);
-        digitalWrite(cells[i]->cell_id, HIGH);
-    }
-
+    pinMode(CELL1, OUTPUT);
+    digitalWrite(CELL1, LOW);
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
     shockTimer.begin(countShock, SHOCK_TIMER_INTERVAL);
-
-    // LED Timer setup
-    uint16_t lastTime = shockCounter;
-    uint8_t cell_marker = 0;
-    bool isBooting = true;
-    while(isBooting){
-        // Get last 16 bits of shockCounter for same type int conversion
-        if((shockCounter & 0xFFFF) - lastTime > 250){
-            digitalWrite(cells[cell_marker]->cell_id, LOW);
-            lastTime = shockCounter;
-            cell_marker++;
-
-            if(cell_marker == 12) isBooting = false;
-        }
-    }
-
-
     Serial.println("Timer Initialized...");
     Serial.println("Shock Setup Complete");
 }
 
+
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*   Place holder for now
+*/
 int inArea(){
     return CELL1;
 }
@@ -85,4 +78,42 @@ void sendShock(int cellPin){
             state = 0;
         #endif
     }
+}
+
+
+// Comment
+void control_shock(Cell *cell){
+    uint32_t curr_time = shockCounter;
+
+    if(cell->in_zone){
+        if(check_start(cell)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = true;
+            send_signal(cell, HIGH);
+        }else if(check_shock(cell, curr_time)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = false;
+            send_signal(cell, LOW);
+        }else if(check_rest){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = true;
+            send_signal(cell, HIGH);
+        }  
+    } else{
+        cell-> last_toggle_time = 0;
+        cell->shock_on = false;
+        return;
+    }
+}
+
+bool check_start(Cell *cell){
+    return ((cell->last_toggle_time == 0) && (!cell->shock_on));
+}
+
+bool check_shock(Cell *cell, uint32_t curr_time){
+    return ((curr_time - cell->last_toggle_time >= DELTA_SHOCK) && (cell->shock_on));
+}
+
+bool check_rest(Cell *cell, uint32_t curr_time){
+    return ((curr_time - cell->last_toggle_time >= DELTA_REST) && (!cell->shock_on));
 }
