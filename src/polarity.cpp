@@ -1,20 +1,28 @@
 #include "polarity.h"
 
 // Global Variables
-volatile unsigned long polarityCounter = 0;  // in ms, max
+volatile unsigned long polarity_counter = 0;  // in ms, max
 
 // Timer Config
-IntervalTimer polarityTimer;
+IntervalTimer polarity_timer;
 
-void polaritySetup(){
+void polarity_setup() {
+    // Initializing Pins
+    Serial.println("Initializing Shock Setup...");
     pinMode(POL_PIN_1, OUTPUT);
     pinMode(POL_PIN_2, OUTPUT);
 
     digitalWrite(POL_PIN_1, LOW);
-    digitalWrite(POL_PIN_1, HIGH);
+    digitalWrite(POL_PIN_2, HIGH);
+    Serial.println("Pins Initialized...");
+
+    // Initializing Timer
+    polarity_timer.begin(swap_polarity, POLARITY_TIMER_INTERVAL);
+    Serial.println("Timer Initialized...");
+    Serial.println("Polarity Setup Complete");
 }
 
-void swapPolarity(){
+void swap_polarity() {
     digitalWrite(POL_PIN_1, !digitalRead(POL_PIN_1));
     digitalWrite(POL_PIN_2, !digitalRead(POL_PIN_2));
 }
