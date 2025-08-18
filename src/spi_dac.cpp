@@ -1,5 +1,8 @@
 #include "spi_dac.h"
-
+#define MAX_VAL 255.0
+#define VREF 5.0
+#define AMP_GAIN 4.19
+#define MAX_VOLTAGE 21.0
 
 void DACSetup(){
     SPI.begin();

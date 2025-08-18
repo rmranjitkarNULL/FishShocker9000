@@ -45,7 +45,7 @@ void setup() {
   DACSetup();
 
   // Initialize Serial for python script
-  myTransfer.begin(Serial);
+  // myTransfer.begin(Serial);
 
   //? Debug LED
   pinMode(LED_BUILTIN, OUTPUT);

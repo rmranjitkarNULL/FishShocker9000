@@ -17,12 +17,12 @@ void polarity_setup() {
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
-    polarity_timer.begin(swap_polarity, POLARITY_TIMER_INTERVAL);
+    polarity_timer.begin(swapPolarity, POLARITY_TIMER_INTERVAL);
     Serial.println("Timer Initialized...");
     Serial.println("Polarity Setup Complete");
 }
 
-void swap_polarity() {
+void swapPolarity() {
     digitalWrite(POL_PIN_1, !digitalRead(POL_PIN_1));
     digitalWrite(POL_PIN_2, !digitalRead(POL_PIN_2));
 }
