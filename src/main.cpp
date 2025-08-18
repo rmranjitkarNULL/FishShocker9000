@@ -41,6 +41,9 @@ void setup() {
   // Initialize polarity setup (Pins, Timers, etc.)
   // polarity_setup();
 
+  // Initialize SPI and DAC
+  DACSetup();
+
   // Initialize Serial for python script
   myTransfer.begin(Serial);
 
@@ -53,24 +56,28 @@ void setup() {
 
 void loop() {
  
-  if(myTransfer.available())
-  {
-    // Declare Variable to store 
-    uint16_t data;
-    uint16_t value;
+  // if(myTransfer.available())
+  // {
+  //   // Declare Variable to store 
+  //   uint16_t data;
+  //   uint16_t value;
 
-    // send all received data back to Python
-    for(uint16_t i=0; i < myTransfer.bytesRead; i++)
-      myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
+  //   // send all received data back to Python
+  //   for(uint16_t i=0; i < myTransfer.bytesRead; i++)
+  //     myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
     
-    myTransfer.sendData(myTransfer.bytesRead);
+  //   myTransfer.sendData(myTransfer.bytesRead);
 
-    myTransfer.rxObj(data);
-    value = int(data);
+  //   myTransfer.rxObj(data);
+  //   value = int(data);
 
-    if(value == 1){
-      digitalWrite(LED_BUILTIN, !(digitalRead(LED_BUILTIN)));
-    }
-  }
+  //   if(value == 1){
+  //     digitalWrite(LED_BUILTIN, !(digitalRead(LED_BUILTIN)));
+  //   }
+  // }
+
+  writeDAC(12);
+
+
 }
 
