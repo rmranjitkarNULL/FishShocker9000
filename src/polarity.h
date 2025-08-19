@@ -31,6 +31,6 @@ void polarity_setup();
  *
  * This function sends signals to the H-bridge to swap the polarity
  */
-void swap_polarity();
+void swapPolarity();
 
 #endif // POLARITY_H
