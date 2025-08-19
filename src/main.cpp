@@ -29,26 +29,22 @@ const uint8_t NUM_CELLS = sizeof(cells) / sizeof(cells[0]);
 
 void setup() {
 
-  // Initialize Serial
+  // // Initialize Serial
   Serial.begin(115200);
-  while (!Serial);
-  Serial.println("Initializing Setup");
+  // while (!Serial);
+  // Serial.println("Initializing Setup");
 
   // Initialize shock setup (Pins, Timers, etc.)
-  shock_setup();
+  shockSetup();
 
   // Initialize polarity setup (Pins, Timers, etc.)
-  // polarity_setup();
+  polarity_setup();
 
   // Initialize SPI and DAC
-  DACSetup();
+  setupDAC();
 
   // Initialize Serial for python script
-  // myTransfer.begin(Serial);
-
-  //? Debug LED
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH);
+  myTransfer.begin(Serial);
 
   Serial.println("\nFishShocker9000: Setup Complete\n");
 } 
@@ -72,7 +68,7 @@ void loop() {
   //   }
   // }
 
-
+  writeDAC(5);
 
 }
 

@@ -16,7 +16,6 @@ IntervalTimer shockTimer;
 void countShock(){
 
     // Counter for shocking
-    if(shockCounter > SHOCK_CYCLE - 1) shockCounter = 0;
     shockCounter++;
 }
 
@@ -30,8 +29,6 @@ void countShock(){
 void shockSetup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
-    pinMode(CELL1, OUTPUT);
-    digitalWrite(CELL1, LOW);
     Serial.println("Pins Initialized...");
 
     // Initializing Timer
@@ -41,63 +38,23 @@ void shockSetup(){
 }
 
 
-/* void countShock()
-* @brief Swaps polarity of shock signal
-* @param: NA
-* @return: NA
-*   Place holder for now
-*/
-int inArea(){
-    return CELL1;
-}
-
-/* void sendShock(int cellPin)
-* @brief Swaps polarity of shock signal
-* @param:
-*   int cellPin: The pin number of the gpio output for the corresponding cell
-* @return: NA
-! Maybe have multiple counters that only go up after the time is done? and have
-! Multiple counters per section that only counts if its being triggered?
-* This function sends out a shock signal based on the timer and pin parameter
-*/
-void sendShock(int cellPin){
-
-    // Send a shock if the counter is less then deltaShock
-    if(shockCounter < DELTA_SHOCK - 1) {
-        digitalWrite(cellPin, HIGH);
-
-        #ifdef SHOCK_PULSE
-            Serial.printf("Sending shock to pin %d: %dms\n", cellPin, shockCounter);
-            state = 1;
-        #endif
-    } else {
-        digitalWrite(cellPin, LOW);
-
-        #ifdef SHOCK_PULSE
-            //Serial.printf("Ending shock on pin %d: %dms\n", cellPin, shockCounter);
-            state = 0;
-        #endif
-    }
-}
-
-
 // Comment
-void control_shock(Cell *cell){
+void controlShock(Cell *cell){
     uint32_t curr_time = shockCounter;
 
     if(cell->in_zone){
-        if(check_start(cell)){
+        if(checkStart(cell)){
             cell->last_toggle_time = curr_time;
             cell->shock_on = true;
-            send_signal(cell, HIGH);
-        }else if(check_shock(cell, curr_time)){
+            sendSignal(cell, HIGH);
+        }else if(checkShock(cell, curr_time)){
             cell->last_toggle_time = curr_time;
             cell->shock_on = false;
-            send_signal(cell, LOW);
-        }else if(check_rest){
+            sendSignal(cell, LOW);
+        }else if(checkRest(cell, curr_time)){
             cell->last_toggle_time = curr_time;
             cell->shock_on = true;
-            send_signal(cell, HIGH);
+            sendSignal(cell, HIGH);
         }  
     } else{
         cell-> last_toggle_time = 0;
@@ -106,14 +63,14 @@ void control_shock(Cell *cell){
     }
 }
 
-bool check_start(Cell *cell){
+bool checkStart(Cell *cell){
     return ((cell->last_toggle_time == 0) && (!cell->shock_on));
 }
 
-bool check_shock(Cell *cell, uint32_t curr_time){
+bool checkShock(Cell *cell, uint32_t curr_time){
     return ((curr_time - cell->last_toggle_time >= DELTA_SHOCK) && (cell->shock_on));
 }
 
-bool check_rest(Cell *cell, uint32_t curr_time){
+bool checkRest(Cell *cell, uint32_t curr_time){
     return ((curr_time - cell->last_toggle_time >= DELTA_REST) && (!cell->shock_on));
 }

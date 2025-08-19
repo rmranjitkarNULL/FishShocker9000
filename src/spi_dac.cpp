@@ -4,10 +4,19 @@
 #define AMP_GAIN 4.19
 #define MAX_VOLTAGE 12.0    
 
+// SPI settings: 1 MHz, MSB first, SPI Mode 0
 SPISettings settingsA(1000000, MSBFIRST, SPI_MODE0);
 
-void DACSetup(){
+void setupDAC(){
+    /*
+    Pins to check:
+    Pin 26: Sync
+    Pin 13: SCK
+    Pinn 11: MOSI
+    */
     pinMode(DAC_CS, OUTPUT);
+    digitalWrite(DAC_CS, HIGH);                             // idle high for CS
+    Serial.println("SPI test starting...");
     SPI.begin();
 }
 
@@ -19,14 +28,14 @@ void writeDAC(float voltage){
     // float DACVoltage = voltage / AMP_GAIN;
     // uint8_t DACVal = (DACVoltage * MAX_VAL) / VREF;    
 
-    // Convert Value to DAC Bytes
-    uint16_t bitMask = valToBits(255);
 
-    digitalWrite(DAC_CS, LOW);                                                                // Write CS LOW to initialize data writing
-    SPI.transfer16(bitMask);   // Send bitFrame of value
-    digitalWrite(DAC_CS, HIGH); // Write CS High to latch the data
+    // TEST CODE
+    digitalWrite(DAC_CS, LOW);              // Select the device
+    SPI.beginTransaction(settingsA);
+    SPI.transfer(0x97);                     // Send test pattern (10101010)
+    SPI.endTransaction();
+    digitalWrite(DAC_CS, HIGH);             // Deselect
 }   
-
 
 
 uint16_t valToBits(int DACVal){
@@ -34,7 +43,7 @@ uint16_t valToBits(int DACVal){
     uint8_t secondByte = (DACVal << 6);
     uint16_t mask = (uint16_t(firstByte) << 8) | secondByte;
 
-    //? Could probably make this just << 5...
+    // ? Could probably make this just << 5...
     // uint16_t mask = (uint16_t(DACVal) << 5);
     
     return mask;

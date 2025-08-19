@@ -2,7 +2,7 @@
 #include <SPI.h>
 
 // DAC CS Pin
-constexpr int DAC_CS = 11;
+constexpr int DAC_CS = 26;
 
 extern SPISettings settingsA;
 
@@ -15,7 +15,7 @@ extern SPISettings settingsA;
  * @param: NA
  * @return: NA
  */
-void DACSetup();
+void setupDAC();
 
 /* void writeDAC(float voltage)
  * @brief Writes a value to the DAC to output the desired voltage
