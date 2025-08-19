@@ -22,7 +22,6 @@ Cell cell_10 = {CELL10};
 Cell cell_11 = {CELL11};
 Cell cell_12 = {CELL12};
 
-
 Cell* cells[] = {&cell_1, &cell_2, &cell_3, &cell_4, &cell_5, &cell_6,
                        &cell_7, &cell_8, &cell_9, &cell_10, &cell_11, &cell_12};
                        
@@ -49,7 +48,7 @@ void setup() {
 
   //? Debug LED
   pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED_BUILTIN, HIGH);
 
   Serial.println("\nFishShocker9000: Setup Complete\n");
 } 
@@ -70,13 +69,9 @@ void loop() {
 
   //   myTransfer.rxObj(data);
   //   value = int(data);
-
-  //   if(value == 1){
-  //     digitalWrite(LED_BUILTIN, !(digitalRead(LED_BUILTIN)));
   //   }
   // }
 
-  writeDAC(12);
 
 
 }

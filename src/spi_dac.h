@@ -1,10 +1,10 @@
 #include <Arduino.h>
 #include <SPI.h>
 
-
-
 // DAC CS Pin
 constexpr int DAC_CS = 11;
+
+extern SPISettings settingsA;
 
 /* void DACSetup()
  * @brief setup function to insitialize SPI
@@ -34,11 +34,11 @@ void writeDAC(float voltage);
  * @brief converts a value to the DAC Serial transfer protocl
  * 
  * This function takes in a DACValue and converts it to bytes corresponding to the 
- * transfer protocl as provided by the datasheet (See page 25).
+ * transfer protocol as provided by the datasheet (See page 25).
  * 
  * Datasheet: https://www.ti.com/product/DAC5311#tech-docs
  *  
  * @param: int DACVal - value ot be converted to bits, between 0 and DAC bit size
  * @return: uint16_t bitFrame - the frame that includes desired bytes for the DAC protocol
  */
-uint16_t valToBytes(int DACVal);
+uint16_t valToBits(int DACVal);
