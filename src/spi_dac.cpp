@@ -14,6 +14,7 @@ void setupDAC(){
     Pin 13: SCK
     Pinn 11: MOSI
     */
+
     pinMode(DAC_CS, OUTPUT);
     digitalWrite(DAC_CS, HIGH);                             // idle high for CS
     Serial.println("SPI test starting...");
@@ -23,16 +24,15 @@ void setupDAC(){
 void writeDAC(float voltage){
 
     // ! Draw this out to confirm equation
-    // Write the desired voltage to the dac
-    // voltage = max(0.0f, min(voltage, MAX_VOLTAGE));     // Clamp voltage to be between 0-MAX_VOLTAGE
-    // float DACVoltage = voltage / AMP_GAIN;
-    // uint8_t DACVal = (DACVoltage * MAX_VAL) / VREF;    
+    Write the desired voltage to the dac
+    voltage = max(0.0f, min(voltage, MAX_VOLTAGE));     // Clamp voltage to be between 0-MAX_VOLTAGE
+    float DACVoltage = voltage / AMP_GAIN;
+    uint8_t DACVal = (DACVoltage * MAX_VAL) / VREF;    
 
 
-    // TEST CODE
     digitalWrite(DAC_CS, LOW);              // Select the device
     SPI.beginTransaction(settingsA);
-    SPI.transfer(0x97);                     // Send test pattern (10101010)
+    SPI.transfer(DACVal);                     
     SPI.endTransaction();
     digitalWrite(DAC_CS, HIGH);             // Deselect
 }   

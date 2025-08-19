@@ -29,10 +29,10 @@ const uint8_t NUM_CELLS = sizeof(cells) / sizeof(cells[0]);
 
 void setup() {
 
-  // // Initialize Serial
+  // Initialize Serial
   Serial.begin(115200);
-  // while (!Serial);
-  // Serial.println("Initializing Setup");
+  while (!Serial);
+  Serial.println("Initializing Setup");
 
   // Initialize shock setup (Pins, Timers, etc.)
   shockSetup();
@@ -51,6 +51,7 @@ void setup() {
 
 void loop() {
  
+  // * Python Serial interface Code
   // if(myTransfer.available())
   // {
   //   // Declare Variable to store 
