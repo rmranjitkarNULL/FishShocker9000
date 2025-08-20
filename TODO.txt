@@ -9,3 +9,9 @@ loop:
   else ignore keypress
 
   sendShock(cell[cell_key]->cell_id)
+
+
+
+PCB:
+trim Barrel jack GND wire to size and solder it to mounting hole from the UNDERSIDE
+remake 2nd PCB for home testing
