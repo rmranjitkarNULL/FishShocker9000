@@ -1,15 +1,15 @@
-# FishShocker9000 ⚡🐟
+# FishShocker9000
 A hardware/software system for high-voltage pulse generation and control, integrating custom PCB design, embedded firmware, and testing tools.
 
 ---
 
-## 📖 Overview
+## Overview
 FishShocker9000 was developed as a project to explore **embedded systems design, PCB layout, and high-voltage electronics**.  
 The system combines custom hardware with **C/C++ firmware** to generate controlled electrical pulses, managed through a modular and extensible software stack.
 
 ---
 
-## 🛠️ Hardware
+## Hardware
 - **Custom PCB Design** (schematics + board layouts)  
 - Power delivery circuits for safe and reliable pulse generation  
 - Signal conditioning and protection hardware  
@@ -17,7 +17,7 @@ The system combines custom hardware with **C/C++ firmware** to generate controll
 
 ---
 
-## 💻 Software
+## Software
 - Developed in **C/C++** using [PlatformIO](https://platformio.org/)  
 - Modular code structure:
   - `include/` → headers  
@@ -29,7 +29,7 @@ The system combines custom hardware with **C/C++ firmware** to generate controll
 
 ---
 
-## 🚀 Features
+## Features
 - Precise pulse generation and control  
 - Configurable timing and waveform parameters  
 - Modular design for hardware/firmware scalability  
@@ -37,7 +37,7 @@ The system combines custom hardware with **C/C++ firmware** to generate controll
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 FishShocker9000/
 ├── include/ # Header files
 ├── lib/ # Custom libraries
@@ -46,23 +46,6 @@ FishShocker9000/
 ├── pcb/ # PCB design files (schematics, layouts)
 └── README.md # Project documentation
 
-
----
-
-## 📊 Results
-- Successful prototyping of high-voltage control hardware  
-- Stable pulse generation validated with oscilloscope testing  
-- Demonstrated integration of embedded firmware with custom PCB design  
-
----
-
-## ⚡ Skills & Tools
-- Embedded C/C++ development  
-- PlatformIO build system  
-- PCB design and layout (mixed-signal considerations)  
-- Circuit design for high-voltage systems  
-- Testing and debugging with oscilloscope + simulation tools  
-
 ---
 
 ## 🔮 Future Improvements
@@ -70,11 +53,6 @@ FishShocker9000/
 - Improve PCB design for efficiency and miniaturization  
 - Expand safety features and protection circuitry  
 - Extend testing framework for automated validation  
-
----
-
-## 👥 Contributors
-- [Your Name] – Embedded systems, PCB design, firmware development  
 
 ---
 
