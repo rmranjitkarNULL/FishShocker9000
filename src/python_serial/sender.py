@@ -6,7 +6,7 @@ import serial.tools.list_ports
 from pySerialTransfer import pySerialTransfer as txfer
 
 # This is dependent on the device and port slot you've selected
-SERIAL_PORT = "/dev/cu.usbmodem179783401"
+SERIAL_PORT = "COM4"
 
 if __name__ == '__main__':
     try:

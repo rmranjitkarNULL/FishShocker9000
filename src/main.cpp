@@ -69,7 +69,7 @@ void loop() {
   //   }
   // }
 
-  writeDAC(5);
+  // writeDAC(1);
 
 }
 
