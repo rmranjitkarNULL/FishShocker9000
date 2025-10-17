@@ -41,4 +41,4 @@ void writeDAC(float voltage);
  * @param: int DACVal - value ot be converted to bits, between 0 and DAC bit size
  * @return: uint16_t bitFrame - the frame that includes desired bytes for the DAC protocol
  */
-uint16_t valToBits(int DACVal);
+uint16_t valToFrame(uint8_t DACVal);

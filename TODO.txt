@@ -1,17 +1,8 @@
-
-Sudo code for format
-
-loop:
-  If cell_key pressed:
-    fifo.add(cell_key)
-  If DAC_key pressed:
-    writeDAC(DAC_key) // probably have a value be typed after?
-  else ignore keypress
-
-  sendShock(cell[cell_key]->cell_id)
-
-
-
-PCB:
-trim Barrel jack GND wire to size and solder it to mounting hole from the UNDERSIDE
-remake 2nd PCB for home testing
+Future PCB Improvements:
+  - Add more current limiting resistors
+  - double check BUCK IC setup, put current resistor from valid output to softstart
+  - FIx barrel jack footprint
+  - Add power switch tot he barrel jack itself
+  - Buck convert from 12-5.3v for headroom
+  - Add voltage buffers to isolate the current when going into the H bridge IC
+  - Add more debugging holes and ground terminals for easier debugging
