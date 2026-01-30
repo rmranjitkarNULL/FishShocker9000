@@ -95,7 +95,7 @@ void loop() {
   //       (shockCounter - keyLastSeen[i] > KEY_TIMEOUT)) {
   //     cells[i]->in_zone = false;
   //   }
-  // }
+  // } 
 
 
 
@@ -104,8 +104,6 @@ void loop() {
   //   controlShock(cells[i]);
   // }
 
-  writeDAC(1.00);
-  controlShock(cells[3]);
+  writeDAC(0.75);
+  controlShock(cells[0]);
 }
-
-
