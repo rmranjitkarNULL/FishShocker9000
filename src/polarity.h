@@ -6,10 +6,7 @@
 // Global Constants
 #define POL_PIN_1 A17                 // Pinout for controlling gate 1 of the H-Bridge
 #define POL_PIN_2 A16                 // Pinout for controlling gate 2 of the H-Bridge
-#define POLARITY_TIMER_INTERVAL 750000 // Swap the polarity every 75ms (in microseconds)
-
-// Global Variables
-extern volatile unsigned long polarity_counter;  // in ms, max
+#define POLARITY_TIMER_INTERVAL 1000   // Constant for swapping the polarity in ms
 
 // Timer Objects
 extern IntervalTimer polarity_timer;

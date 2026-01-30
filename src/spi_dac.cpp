@@ -18,7 +18,7 @@ void setupDAC(){
     pinMode(DAC_CS, OUTPUT);
     digitalWrite(DAC_CS, HIGH);                             // idle high for CS
     SPI.begin();
-    Serial.println("SPI Initialized...\n");
+    Serial.println("SPI Initialized");
 }
 
 //8-bit dac
@@ -27,7 +27,7 @@ void writeDAC(float voltage) {
     // Clamp and scale voltage
     float voltageClamped = constrain(voltage, 0.0, MAX_VOLTAGE);
     uint8_t DACVal = (voltageClamped * 255.0) / (VREF * AMP_GAIN);
-    uint16_t frame = valToFrame(DACVal + 6); // Figure out why the math isn't right and why we need the offset
+    uint16_t frame = valToFrame(DACVal + 24); // Figure out why the math isn't right and why we need the offset
 
     // Transmit frame MSB-first
     SPI.beginTransaction(settingsA);

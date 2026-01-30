@@ -38,17 +38,18 @@ void shockSetup(){
     // Initializing Timer
     shockTimer.begin(countShock, SHOCK_TIMER_INTERVAL);
     Serial.println("Timer Initialized...");
-    Serial.println("Shock Setup Complete");
 
     // Timer test
     int curr_time = shockCounter;
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 10; i++){
         while((shockCounter - curr_time) < 100);
         curr_time = shockCounter;
         Serial.print("Timer Test: ");
         Serial.println(shockCounter);
     }
+
+    Serial.println("\nShock Setup Complete\n");
 }
 
 void controlShock(Cell *cell){

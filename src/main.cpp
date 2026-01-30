@@ -44,7 +44,7 @@ void setup() {
   // Initialize Serial
   Serial.begin(115200);
   while (!Serial);
-  Serial.println("Initializing Setup");
+  Serial.println("Initializing Setup\n");
 
   // Initialize shock setup (Pins, Timers, etc.)
   shockSetup();
@@ -104,7 +104,7 @@ void loop() {
   //   controlShock(cells[i]);
   // }
 
-  writeDAC(12.0);
+  writeDAC(1.00);
   controlShock(cells[3]);
 }
 
