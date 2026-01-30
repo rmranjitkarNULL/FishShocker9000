@@ -11,7 +11,7 @@ IntervalTimer shockTimer;
 * @param: NA
 * @return: NA
 *
-* Timer function that counts up to the SHOCK_CYCLE and resets
+* Timer function that counts up to the SHOCK_CYCLE
 */
 void countShock(){
 
@@ -19,18 +19,22 @@ void countShock(){
     shockCounter++;
 }
 
-/* void countShock()
-* @brief Swaps polarity of shock signal
-* @param: NA
-* @return: NA
-*
-* This setup function sets up the pins and timers for this source file
-*/
 void shockSetup(){
     // Initializing Pins
     Serial.println("Initializing Shock Setup...");
     Serial.println("Pins Initialized...");
 
+    for (int i = 0; i < NUM_CELLS; i++) {
+        pinMode(cells[i]->cell_id, OUTPUT);
+        digitalWrite(cells[i]->cell_id, LOW);
+    }
+
+    for (int i = 0; i < NUM_CELLS; i++) {
+        digitalWrite(cells[i]->cell_id, HIGH);
+        delay(100);
+        digitalWrite(cells[i]->cell_id, LOW);
+    }
+    
     // Initializing Timer
     shockTimer.begin(countShock, SHOCK_TIMER_INTERVAL);
     Serial.println("Timer Initialized...");
@@ -47,8 +51,6 @@ void shockSetup(){
     }
 }
 
-
-// Comment
 void controlShock(Cell *cell){
     uint32_t curr_time = shockCounter;
 
@@ -67,8 +69,9 @@ void controlShock(Cell *cell){
             sendSignal(cell, HIGH);
         }  
     } else{
-        cell-> last_toggle_time = 0;
+        cell->last_toggle_time = 0;
         cell->shock_on = false;
+        sendSignal(cell, LOW);
         return;
     }
 }
@@ -84,3 +87,11 @@ bool checkShock(Cell *cell, uint32_t curr_time){
 bool checkRest(Cell *cell, uint32_t curr_time){
     return ((curr_time - cell->last_toggle_time >= DELTA_REST) && (!cell->shock_on));
 }
+
+void sendSignal(Cell *cell, int level)
+{
+    if (cell == nullptr) return;
+
+    digitalWrite(cell->cell_id, level ? HIGH : LOW);
+}
+

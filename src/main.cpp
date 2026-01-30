@@ -27,6 +27,18 @@ Cell* cells[] = {&cell_1, &cell_2, &cell_3, &cell_4, &cell_5, &cell_6,
                        
 const uint8_t NUM_CELLS = sizeof(cells) / sizeof(cells[0]);
 
+// Declare Variable to store for pyserial
+char ch;
+
+// key Mapping to cells
+const char keyMap[NUM_CELLS] = {
+    '1','2','3','4','5','6','7','8','9','0','-','='
+};
+
+uint32_t keyLastSeen[12] = {0};
+const uint32_t KEY_TIMEOUT = 50;  // ms or ticks
+
+
 void setup() {
 
   // Initialize Serial
@@ -47,28 +59,53 @@ void setup() {
   myTransfer.begin(Serial);
 
   Serial.println("\nFishShocker9000: Setup Complete\n");
+
+  // * Testing: Set all cells to have the fish "in_zone" so the shocks can turn on
+  for(int i = 0; i < NUM_CELLS; i++){
+      cells[i]->in_zone = true;
+  }
 } 
 
 void loop() {
- 
-  // * Python Serial interface Code
-  // if(myTransfer.available())
-  // {
-  //   // Declare Variable to store 
-  //   uint16_t data;
-  //   uint16_t value;
 
-  //   // send all received data back to Python
-  //   for(uint16_t i=0; i < myTransfer.bytesRead; i++)
-  //     myTransfer.packet.txBuff[i] = myTransfer.packet.rxBuff[i];
-    
-  //   myTransfer.sendData(myTransfer.bytesRead);
+  // if (myTransfer.available()) {
 
-  //   myTransfer.rxObj(data);
-  //   value = int(data);
+  //   // Receive a single character
+  //   myTransfer.rxObj(ch);
+
+  //   // Echo back to Python (optional, but matches your Python code)
+  //   uint16_t sendSize = 0;
+  //   sendSize += myTransfer.txObj(ch);
+  //   myTransfer.sendData(sendSize);
+
+  //   // Update matching cell
+  //   for (int i = 0; i < NUM_CELLS; i++) {
+  //     if (ch == keyMap[i]) {
+  //       cells[i]->in_zone = true;
+  //       keyLastSeen[i] = shockCounter;
+  //     }
+  //   }
+
+  //   ch = '\0';
+  // }
+
+  // // Handle Key Timeouts
+  // for (int i = 0; i < NUM_CELLS; i++) {
+  //   if (cells[i]->in_zone &&
+  //       (shockCounter - keyLastSeen[i] > KEY_TIMEOUT)) {
+  //     cells[i]->in_zone = false;
   //   }
   // }
 
-    writeDAC(12.0);
-  }
+
+
+  // // Run the shock controller
+  // for (int i = 0; i < NUM_CELLS; i++) {
+  //   controlShock(cells[i]);
+  // }
+
+  writeDAC(12.0);
+  controlShock(cells[3]);
+}
+
 

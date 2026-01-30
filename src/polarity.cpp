@@ -1,7 +1,7 @@
 #include "polarity.h"
 
 // Global Variables
-volatile unsigned long polarity_counter = 0;  // in ms, max
+volatile unsigned long polarity_counter = 1000;  // in ms, max
 
 // Timer Config
 IntervalTimer polarity_timer;
