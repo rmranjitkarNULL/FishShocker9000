@@ -64,6 +64,9 @@ void setup() {
   for(int i = 0; i < NUM_CELLS; i++){
       cells[i]->in_zone = true;
   }
+
+  writeDAC(0.75);
+
 } 
 
 void loop() {
@@ -104,6 +107,6 @@ void loop() {
   //   controlShock(cells[i]);
   // }
 
-  writeDAC(0.75);
   controlShock(cells[0]);
+  controlShock(cells[2]);
 }
