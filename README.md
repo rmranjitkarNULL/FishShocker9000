@@ -17,18 +17,6 @@ The system combines custom hardware with **C/C++ firmware** to generate controll
 
 ---
 
-## Software
-- Developed in **C/C++** using [PlatformIO](https://platformio.org/)  
-- Modular code structure:
-  - `include/` → headers  
-  - `src/` → main firmware logic  
-  - `lib/` → supporting libraries  
-  - `test/` → test scripts and validation routines  
-- Python scripts for testing and automation  
-- Real-time control of timing and pulse delivery  
-
----
-
 ## Features
 - Precise pulse generation and control  
 - Configurable timing and waveform parameters  
@@ -49,7 +37,5 @@ FishShocker9000/
 ---
 
 ## Future Improvements
-- Add microcontroller-based UI for parameter tuning  
 - Improve PCB design for efficiency and miniaturization  
 - Expand safety features and protection circuitry  
-- Extend testing framework for automated validation  
