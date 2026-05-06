@@ -39,3 +39,11 @@ FishShocker9000/
 ## Future Improvements
 - Improve PCB design for efficiency and miniaturization  
 - Expand safety features and protection circuitry  
+
+
+---
+
+TODO
+-[] Redo Readme
+-[] Make assembly guide
+-[] [add](https://www.pjrc.com/teensy/loader.html)
