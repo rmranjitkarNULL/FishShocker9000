@@ -44,6 +44,6 @@ FishShocker9000/
 ---
 
 TODO
--[] Redo Readme
--[] Make assembly guide
--[] [add](https://www.pjrc.com/teensy/loader.html)
+-[ ] Redo Readme
+-[ ] Make assembly guide
+-[ ] [add](https://www.pjrc.com/teensy/loader.html)
