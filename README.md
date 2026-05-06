@@ -48,13 +48,8 @@ FishShocker9000/
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 - Add microcontroller-based UI for parameter tuning  
 - Improve PCB design for efficiency and miniaturization  
 - Expand safety features and protection circuitry  
 - Extend testing framework for automated validation  
-
----
-
-## 📜 License
-This project is released under the MIT License. See `LICENSE` for details.
