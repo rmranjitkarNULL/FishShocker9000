@@ -1,0 +1,98 @@
+#include "shock.h"
+
+// Global Variables
+volatile unsigned long shockCounter = 0;
+
+// Timer config
+IntervalTimer shockTimer;
+
+/* void countShock()
+* @brief Swaps polarity of shock signal
+* @param: NA
+* @return: NA
+*
+* Timer function that counts up to the SHOCK_CYCLE
+*/
+void countShock(){
+
+    // Counter for shocking
+    shockCounter++;
+}
+
+void shockSetup(){
+    // Initializing Pins
+    Serial.println("Initializing Shock Setup...");
+    Serial.println("Pins Initialized...");
+
+    for (int i = 0; i < NUM_CELLS; i++) {
+        pinMode(cells[i]->cell_id, OUTPUT);
+        digitalWrite(cells[i]->cell_id, LOW);
+    }
+
+    for (int i = 0; i < NUM_CELLS; i++) {
+        digitalWrite(cells[i]->cell_id, HIGH);
+        delay(100);
+        digitalWrite(cells[i]->cell_id, LOW);
+    }
+    
+    // Initializing Timer
+    shockTimer.begin(countShock, SHOCK_TIMER_INTERVAL);
+    Serial.println("Timer Initialized...");
+
+    // Timer test
+    int curr_time = shockCounter;
+
+    for(int i = 0; i < 10; i++){
+        while((shockCounter - curr_time) < 100);
+        curr_time = shockCounter;
+        Serial.print("Timer Test: ");
+        Serial.println(shockCounter);
+    }
+
+    Serial.println("\nShock Setup Complete\n");
+}
+
+void controlShock(Cell *cell){
+    uint32_t curr_time = shockCounter;
+
+    if(cell->in_zone){
+        if(checkStart(cell)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = true;
+            sendSignal(cell, HIGH);
+        }else if(checkShock(cell, curr_time)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = false;
+            sendSignal(cell, LOW);
+        }else if(checkRest(cell, curr_time)){
+            cell->last_toggle_time = curr_time;
+            cell->shock_on = true;
+            sendSignal(cell, HIGH);
+        }  
+    } else{
+        cell->last_toggle_time = 0;
+        cell->shock_on = false;
+        sendSignal(cell, LOW);
+        return;
+    }
+}
+
+bool checkStart(Cell *cell){
+    return ((cell->last_toggle_time == 0) && (!cell->shock_on));
+}
+
+bool checkShock(Cell *cell, uint32_t curr_time){
+    return ((curr_time - cell->last_toggle_time >= DELTA_SHOCK) && (cell->shock_on));
+}
+
+bool checkRest(Cell *cell, uint32_t curr_time){
+    return ((curr_time - cell->last_toggle_time >= DELTA_REST) && (!cell->shock_on));
+}
+
+void sendSignal(Cell *cell, int level)
+{
+    if (cell == nullptr) return;
+
+    digitalWrite(cell->cell_id, level ? HIGH : LOW);
+}
+
