@@ -4,6 +4,7 @@
 .vscode/launch.json
 .vscode/ipch
 .vscode/settings.json
+.vscode/extensions.json
 PCB/FishShocker9000/FishShocker9000-backups/
 
 # PlatformIO build/output files
@@ -54,3 +55,8 @@ fp-info-cache
 # *.drl
 # *.pos
 # *.bom.csv
+
+# ignore
+venv/
+.venv/
+env/
